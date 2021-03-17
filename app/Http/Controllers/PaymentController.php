@@ -18,7 +18,7 @@ class PaymentController extends Controller
    			Log::info('Showing chit details of : ' . $chit_id);
    			$chit_name = DB::select('select chit_name from chits where chit_id = ?', [$chit_id]);
 			
-       
+       }
    	Schema::create($chit_name, function (Blueprint $table) {
     $table->increments('id');
     $table->date('due_date');
