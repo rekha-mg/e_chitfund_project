@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ChitController;
+use App\Http\Controllers\PaymentController;
+use Illuminate\Support\Facades\Log;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -31,3 +33,4 @@ Route::post('/NewChit', 'App\Http\Controllers\ChitController@insert');
 Route::patch('/Chit/{chit_id}', 'App\Http\Controllers\ChitController@edit');
 Route::delete('/Chit/{chit_id}', 'App\Http\Controllers\ChitController@destroy');
 
+Route::post('/Table/{chit_id}/{member_id}','App\Http\Controllers\PaymentController@newtable');
