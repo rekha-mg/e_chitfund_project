@@ -27,7 +27,10 @@ public function display(){
 
        }
        if (Schema::hasTable($chit_name)) { 
-       	 $this->display();
+       	echo "please enter the details of ".$chit_name;
+       	// Entering the data of perticular new chit 
+       	// how to call insertchit function wth parameter
+       	
        }
 
 	else{
