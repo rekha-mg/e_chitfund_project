@@ -21,16 +21,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/AllMembers', 'App\Http\Controllers\MemberController@showAll');
-Route::get('/Member/{phone}', 'App\Http\Controllers\MemberController@showOne');
-Route::post('/NewMember', 'App\Http\Controllers\MemberController@insert');
-Route::patch('/Member/{member_id}', 'App\Http\Controllers\MemberController@edit');
-Route::delete('/Member/{member_id}', 'App\Http\Controllers\MemberController@destroy');
+Route::get('/members', 'App\Http\Controllers\MemberController@showAll');
+Route::get('/members/{phone}', 'App\Http\Controllers\MemberController@showOne');
+Route::post('/members', 'App\Http\Controllers\MemberController@insert');
+Route::patch('/members/{member_id}', 'App\Http\Controllers\MemberController@edit');
+Route::delete('/members/{member_id}', 'App\Http\Controllers\MemberController@destroy');
 
-Route::get('/Allchits', 'App\Http\Controllers\ChitController@showAll');
-Route::get('/Chit/{chit_id}', 'App\Http\Controllers\ChitController@showOne');
-Route::post('/NewChit', 'App\Http\Controllers\ChitController@insert');
-Route::patch('/Chit/{chit_id}', 'App\Http\Controllers\ChitController@edit');
-Route::delete('/Chit/{chit_id}', 'App\Http\Controllers\ChitController@destroy');
+Route::get('/chits', 'App\Http\Controllers\ChitController@showAll');
+Route::get('/chits/{chit_id}', 'App\Http\Controllers\ChitController@showOne');
+Route::post('/chits', 'App\Http\Controllers\ChitController@insert');
+Route::patch('/chits/{chit_id}', 'App\Http\Controllers\ChitController@edit');
+Route::delete('/chits/{chit_id}', 'App\Http\Controllers\ChitController@destroy');
 
-Route::post('/Table/{chit_id}/{member_id}','App\Http\Controllers\PaymentController@newtable');
+Route::post('/payments/{chit_id}/{member_id}','App\Http\Controllers\PaymentController@newtable');
+
+
+
+

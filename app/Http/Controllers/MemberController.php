@@ -45,14 +45,40 @@ class MemberController extends Controller
         return $this->sendResponse("true", $user_list, 'request completed', 200);
     }
 
-    public function showOne(Request $req, $ph)
+    public function showOne(Request $req,$id)
     {
-        if ($ph > 0) {
+       /* if($id>0){
+            try{
+                Log::info('Showing user details of :'.$id);
+                $member=DB::select ('select * from members where member_id =?',[$id]);
+            }
+            catch(\PDOException $pex){
+             Log::critical('some error: ' . print_r($pex->getMessage(), true) ); //xampp off
+                return $this->sendResponse("false", "", 'error related to database', 500);
+            } catch (\Exception $e) {
+                Log::critical('some error: ' . print_r($e->getMessage(), true));
+                Log::critical('error line: ' . print_r($e->getLine(), true));
+                return $this->sendResponse("false", "", 'some error in server', 500);
+            }
+        }
+         else {
+            return $this->sendResponse("false", "", 'some error in user id', 500);
+            }
+            //return $this->sendResponse("true", $member, 'request completed', 200);
+            // where to place above code ...
+        
+*/
+
+
+       if ($request->has('member_name') && $request->has('password')) {
+            $name=$request->input('member_name');
+            $password=$request->input('password');
+
             try {
-                Log::info('Showing user details of : ' . $ph);
-                $member_id = DB::select('select * from members where phone = ?', [$ph]);
+                Log::info('Showing user details of : ' . $name);
+                $member_id = DB::select('select member_id from members where name = ? and password=?', [$name] ,[$password]);
             } catch (\PDOException $pex) {
-                Log::critical('some error: ' . print_r($pex->getMessage(), true)); //xampp off
+                Log::critical('some error: ' . print_r($pex->getMessage(), true) ); //xampp off
                 return $this->sendResponse("false", "", 'error related to database', 500);
             } catch (\Exception $e) {
                 Log::critical('some error: ' . print_r($e->getMessage(), true));
@@ -60,7 +86,7 @@ class MemberController extends Controller
                 return $this->sendResponse("false", "", 'some error in server', 500);
             }
         } else {
-            return $this->sendResponse("false", "", 'some error in user id', 500);
+            return $this->sendResponse("false", "", 'some error in user name', 500);
         }
         return $this->sendResponse("true", $member_id, 'request completed', 200);
     }
@@ -133,7 +159,8 @@ class MemberController extends Controller
     public function destroy($member_id){
         if($member_id >0 && $member_id<20){
         	try{
-        		$resp=DB::delete('delete from members where member_id=?',[$member_id]);
+                
+        		$resp=DB::update('update members set is_deleted =? where member_id =?',['true'],[$member_id]);
         	}
         	catch(\PDOException $pex){
         		Log::critical('some error:'.print_r($pex->getMessage(),true));//xampp off

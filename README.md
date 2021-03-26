@@ -1,5 +1,19 @@
 ### ChitFund Project
 
+### Create a project
+
+* Visit the following URL and download composer to install it on your system.
+
+* https://getcomposer.org/download/
+
+* After the Composer is installed, check the installation by typing the Composer
+* composer create-project laravel/laravel –-prefer-dist
+##### install the complete framework by typing the following command −
+
+* composer create-project laravel/laravel test dev-develop
+##### Start the Laravel service by executing the following command.
+
+* php artisan serve
 
 #### Following are url (postman) of chits table
 ##### Add new chit (Post)
