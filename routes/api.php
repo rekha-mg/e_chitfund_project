@@ -22,7 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/members', 'App\Http\Controllers\MemberController@showAll');
-Route::get('/members/{phone}', 'App\Http\Controllers\MemberController@showOne');
+Route::post('/login/{member_name}/{password}', 'App\Http\Controllers\MemberController@showTwo');
+Route::get('/members/{member_id}', 'App\Http\Controllers\MemberController@showOne');
 Route::post('/members', 'App\Http\Controllers\MemberController@insert');
 Route::patch('/members/{member_id}', 'App\Http\Controllers\MemberController@edit');
 Route::delete('/members/{member_id}', 'App\Http\Controllers\MemberController@destroy');

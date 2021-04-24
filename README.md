@@ -7,7 +7,9 @@
 * https://getcomposer.org/download/
 
 * After the Composer is installed, check the installation by typing the Composer
-* composer create-project laravel/laravel –-prefer-dist
+* composer create-project laravel/laravel first_project
+* laravel/laravel: It is a vendor package.
+* firstproject: It is a project name.
 ##### install the complete framework by typing the following command −
 
 * composer create-project laravel/laravel test dev-develop

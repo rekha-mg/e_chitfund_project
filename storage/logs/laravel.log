@@ -2088,3 +2088,490 @@
 #36 C:\\code\\laravel\\server.php(21): require_once('C:\\\\code\\\\laravel...')
 #37 {main}
 "} 
+[2021-04-08 04:43:22] local.INFO: Display all chits:   
+[2021-04-08 04:43:23] local.INFO: Total number of chits 2  
+[2021-04-08 04:43:39] local.INFO: Showing chit details of : 2  
+[2021-04-08 04:44:18] local.INFO: Showing chit details of : 2  
+[2021-04-08 04:44:22] local.INFO: Display all chits:   
+[2021-04-08 04:44:22] local.INFO: Total number of chits 2  
+[2021-04-08 04:44:36] local.CRITICAL: some error: SQLSTATE[HY093]: Invalid parameter number (SQL: insert into chits (chit_name,capital_amount,total_members,monthly_payment,duration,start_date,ending_date) values(grand_ganesha,100000,6000,20,2021-01-10,2022-08-10,?))  
+[2021-04-08 04:44:43] local.INFO: Display all chits:   
+[2021-04-08 04:44:43] local.INFO: Total number of chits 2  
+[2021-04-08 04:45:21] local.CRITICAL: some error: SQLSTATE[HY093]: Invalid parameter number (SQL: insert into chits (chit_name,capital_amount,total_members,monthly_payment,duration,start_date,ending_date) values(grand_ganesha,100000,6000,20,2021-01-10,2022-08-10,?))  
+[2021-04-08 04:47:39] local.INFO: Inserted new chit :1  
+[2021-04-08 04:47:44] local.INFO: Display all chits:   
+[2021-04-08 04:47:45] local.INFO: Total number of chits 3  
+[2021-04-08 04:52:43] local.INFO: Showing chit details of : 4  
+[2021-04-08 04:52:54] local.INFO: updated chit :4  
+[2021-04-08 04:52:54] local.INFO: Updated user deatils: 4  
+[2021-04-08 04:53:04] local.INFO: Display all chits:   
+[2021-04-08 04:53:04] local.INFO: Total number of chits 3  
+[2021-04-08 05:16:58] local.INFO: Display all chits:   
+[2021-04-08 05:16:58] local.INFO: Total number of chits 3  
+[2021-04-08 05:17:23] local.INFO: Showing chit details of : 2  
+[2021-04-08 05:17:27] local.INFO: Showing chit details of : 3  
+[2021-04-08 05:17:52] local.INFO: Inserted new chit :1  
+[2021-04-08 05:18:00] local.INFO: Display all chits:   
+[2021-04-08 05:18:00] local.INFO: Total number of chits 4  
+[2021-04-08 05:18:31] local.INFO: Showing chit details of : 4  
+[2021-04-08 05:18:36] local.INFO: Showing chit details of : 5  
+[2021-04-08 05:18:56] local.INFO: Showing chit details of : 5  
+[2021-04-08 05:19:00] local.INFO: updated chit :5  
+[2021-04-08 05:19:00] local.INFO: Updated user deatils: 5  
+[2021-04-08 05:19:07] local.INFO: Display all chits:   
+[2021-04-08 05:19:07] local.INFO: Total number of chits 4  
+[2021-04-08 05:19:23] local.INFO: deleted user details: 5  
+[2021-04-08 05:19:29] local.INFO: Display all chits:   
+[2021-04-08 05:19:29] local.INFO: Total number of chits 3  
+[2021-04-12 06:53:50] local.INFO: Display all chits:   
+[2021-04-12 06:53:50] local.INFO: Total number of chits 3  
+[2021-04-12 06:53:56] local.INFO: Showing chit details of : 1  
+[2021-04-12 06:54:00] local.INFO: Showing chit details of : 2  
+[2021-04-14 10:07:13] local.INFO: Display all users:   
+[2021-04-14 10:07:13] local.INFO: Total number of users2  
+[2021-04-14 10:11:47] local.INFO: Display all users:   
+[2021-04-14 10:11:47] local.INFO: Total number of users2  
+[2021-04-14 10:27:05] local.INFO: Display all users:   
+[2021-04-14 10:27:05] local.INFO: Total number of users2  
+[2021-04-14 10:27:31] local.INFO: Display all users:   
+[2021-04-14 10:27:31] local.INFO: Total number of users2  
+[2021-04-14 10:32:12] local.INFO: Display all users:   
+[2021-04-14 10:32:12] local.INFO: Total number of users2  
+[2021-04-14 10:32:55] local.INFO: Display all users:   
+[2021-04-14 10:32:55] local.INFO: Total number of users2  
+[2021-04-14 10:33:09] local.INFO: Display all users:   
+[2021-04-14 10:33:09] local.INFO: Total number of users2  
+[2021-04-14 10:33:33] local.INFO: Display all users:   
+[2021-04-14 10:33:33] local.INFO: Total number of users2  
+[2021-04-14 10:34:39] local.INFO: Display all users:   
+[2021-04-14 10:34:39] local.INFO: Total number of users2  
+[2021-04-14 10:35:01] local.INFO: Display all users:   
+[2021-04-14 10:35:01] local.INFO: Total number of users2  
+[2021-04-14 10:46:34] local.INFO: Display all users:   
+[2021-04-14 10:46:34] local.INFO: Total number of users2  
+[2021-04-14 10:50:20] local.INFO: Display all users:   
+[2021-04-14 10:50:20] local.INFO: Total number of users2  
+[2021-04-14 10:50:49] local.INFO: Display all users:   
+[2021-04-14 10:50:49] local.INFO: Total number of users2  
+[2021-04-14 10:53:07] local.INFO: Display all users:   
+[2021-04-14 10:53:07] local.INFO: Total number of users2  
+[2021-04-14 10:53:59] local.INFO: Display all users:   
+[2021-04-14 10:53:59] local.INFO: Total number of users2  
+[2021-04-14 10:54:20] local.INFO: Display all users:   
+[2021-04-14 10:54:20] local.INFO: Total number of users2  
+[2021-04-14 10:55:02] local.INFO: Display all users:   
+[2021-04-14 10:55:02] local.INFO: Total number of users2  
+[2021-04-14 10:55:04] local.INFO: Display all users:   
+[2021-04-14 10:55:04] local.INFO: Total number of users2  
+[2021-04-14 10:56:20] local.INFO: Display all users:   
+[2021-04-14 10:56:20] local.INFO: Total number of users2  
+[2021-04-14 11:00:34] local.INFO: Display all users:   
+[2021-04-14 11:00:34] local.INFO: Total number of users2  
+[2021-04-14 11:01:31] local.INFO: Display all users:   
+[2021-04-14 11:01:31] local.INFO: Total number of users2  
+[2021-04-14 11:05:06] local.INFO: Display all users:   
+[2021-04-14 11:05:06] local.INFO: Total number of users2  
+[2021-04-14 11:05:42] local.INFO: Display all users:   
+[2021-04-14 11:05:42] local.INFO: Total number of users2  
+[2021-04-14 11:08:01] local.INFO: Display all users:   
+[2021-04-14 11:08:01] local.INFO: Total number of users2  
+[2021-04-14 11:08:16] local.INFO: Display all users:   
+[2021-04-14 11:08:16] local.INFO: Total number of users2  
+[2021-04-14 11:10:54] local.INFO: Display all users:   
+[2021-04-14 11:10:55] local.INFO: Total number of users2  
+[2021-04-14 11:11:06] local.INFO: Display all users:   
+[2021-04-14 11:11:06] local.INFO: Total number of users2  
+[2021-04-14 11:11:34] local.INFO: Display all users:   
+[2021-04-14 11:11:34] local.INFO: Total number of users2  
+[2021-04-14 11:12:05] local.INFO: Display all users:   
+[2021-04-14 11:12:05] local.INFO: Total number of users2  
+[2021-04-15 06:40:28] local.INFO: Display all users:   
+[2021-04-15 06:40:28] local.INFO: Total number of users2  
+[2021-04-15 06:40:58] local.INFO: Display all users:   
+[2021-04-15 06:40:58] local.INFO: Total number of users2  
+[2021-04-15 06:41:38] local.INFO: Display all users:   
+[2021-04-15 06:41:39] local.INFO: Total number of users2  
+[2021-04-15 06:42:04] local.INFO: Display all users:   
+[2021-04-15 06:42:04] local.INFO: Total number of users2  
+[2021-04-15 06:42:24] local.INFO: Display all users:   
+[2021-04-15 06:42:24] local.INFO: Total number of users2  
+[2021-04-15 07:44:34] local.INFO: Display all users:   
+[2021-04-15 07:44:34] local.INFO: Total number of users2  
+[2021-04-15 07:45:00] local.INFO: Display all users:   
+[2021-04-15 07:45:00] local.INFO: Total number of users2  
+[2021-04-15 07:45:26] local.INFO: Display all users:   
+[2021-04-15 07:45:26] local.INFO: Total number of users2  
+[2021-04-15 07:45:34] local.INFO: Display all users:   
+[2021-04-15 07:45:34] local.INFO: Total number of users2  
+[2021-04-15 07:46:01] local.INFO: Display all users:   
+[2021-04-15 07:46:01] local.INFO: Total number of users2  
+[2021-04-15 07:46:08] local.ERROR: Undefined variable: request {"exception":"[object] (ErrorException(code: 0): Undefined variable: request at C:\\code\\laravel\\app\\Http\\Controllers\\MemberController.php:73)
+[stacktrace]
+#0 C:\\code\\laravel\\app\\Http\\Controllers\\MemberController.php(73): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\\\code\\\\laravel...', 73, Array)
+#1 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\MemberController->showOne(Object(Illuminate\\Http\\Request), '1')
+#2 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('showOne', Array)
+#3 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MemberController), 'showOne')
+#4 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
+#5 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(693): Illuminate\\Routing\\Route->run()
+#6 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#8 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#11 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#12 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#13 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#15 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(670): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#16 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#17 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#18 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#19 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\code\\laravel\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\code\\laravel\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#35 C:\\code\\laravel\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#36 C:\\code\\laravel\\server.php(21): require_once('C:\\\\code\\\\laravel...')
+#37 {main}
+"} 
+[2021-04-15 07:47:44] local.INFO: Display all users:   
+[2021-04-15 07:47:44] local.INFO: Total number of users2  
+[2021-04-15 07:50:00] local.INFO: Display all users:   
+[2021-04-15 07:50:00] local.INFO: Total number of users2  
+[2021-04-15 07:50:09] local.INFO: Display all users:   
+[2021-04-15 07:50:09] local.INFO: Total number of users2  
+[2021-04-15 07:50:14] local.INFO: Display all users:   
+[2021-04-15 07:50:14] local.INFO: Total number of users2  
+[2021-04-15 07:50:38] local.INFO: Display all users:   
+[2021-04-15 07:50:38] local.INFO: Total number of users2  
+[2021-04-15 07:50:44] local.INFO: Display all users:   
+[2021-04-15 07:50:44] local.INFO: Total number of users2  
+[2021-04-15 07:52:25] local.INFO: Display all users:   
+[2021-04-15 07:52:25] local.INFO: Total number of users2  
+[2021-04-15 07:59:02] local.INFO: Display all users:   
+[2021-04-15 07:59:02] local.INFO: Total number of users2  
+[2021-04-15 08:00:05] local.INFO: Display all users:   
+[2021-04-15 08:00:05] local.INFO: Total number of users2  
+[2021-04-15 08:00:27] local.INFO: Display all users:   
+[2021-04-15 08:00:27] local.INFO: Total number of users2  
+[2021-04-15 08:00:56] local.INFO: Display all users:   
+[2021-04-15 08:00:56] local.INFO: Total number of users2  
+[2021-04-15 08:01:43] local.INFO: Display all users:   
+[2021-04-15 08:01:43] local.INFO: Total number of users2  
+[2021-04-15 08:05:37] local.INFO: Display all users:   
+[2021-04-15 08:05:37] local.INFO: Total number of users2  
+[2021-04-15 08:05:52] local.INFO: Display all users:   
+[2021-04-15 08:05:52] local.INFO: Total number of users2  
+[2021-04-15 08:10:45] local.INFO: Display all users:   
+[2021-04-15 08:10:45] local.INFO: Total number of users2  
+[2021-04-15 08:11:39] local.INFO: Display all users:   
+[2021-04-15 08:11:39] local.INFO: Total number of users2  
+[2021-04-15 08:11:51] local.INFO: Display all users:   
+[2021-04-15 08:11:51] local.INFO: Total number of users2  
+[2021-04-15 08:12:03] local.ERROR: Undefined variable: request {"exception":"[object] (ErrorException(code: 0): Undefined variable: request at C:\\code\\laravel\\app\\Http\\Controllers\\MemberController.php:50)
+[stacktrace]
+#0 C:\\code\\laravel\\app\\Http\\Controllers\\MemberController.php(50): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\\\code\\\\laravel...', 50, Array)
+#1 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\MemberController->showOne(Object(Illuminate\\Http\\Request), 'suhas', 'suhas123')
+#2 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('showOne', Array)
+#3 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MemberController), 'showOne')
+#4 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
+#5 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(693): Illuminate\\Routing\\Route->run()
+#6 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#8 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#11 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#12 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#13 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#15 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(670): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#16 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#17 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#18 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#19 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\code\\laravel\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\code\\laravel\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#35 C:\\code\\laravel\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#36 C:\\code\\laravel\\server.php(21): require_once('C:\\\\code\\\\laravel...')
+#37 {main}
+"} 
+[2021-04-15 08:12:36] local.INFO: Display all users:   
+[2021-04-15 08:12:36] local.INFO: Total number of users2  
+[2021-04-15 08:15:19] local.INFO: Display all users:   
+[2021-04-15 08:15:19] local.INFO: Total number of users2  
+[2021-04-15 08:16:34] local.INFO: Display all users:   
+[2021-04-15 08:16:34] local.INFO: Total number of users2  
+[2021-04-15 08:16:44] local.INFO: Display all users:   
+[2021-04-15 08:16:44] local.INFO: Total number of users2  
+[2021-04-15 08:17:13] local.INFO: Display all users:   
+[2021-04-15 08:17:13] local.INFO: Total number of users2  
+[2021-04-15 08:17:45] local.INFO: Display all users:   
+[2021-04-15 08:17:45] local.INFO: Total number of users2  
+[2021-04-15 08:18:25] local.INFO: Display all users:   
+[2021-04-15 08:18:26] local.INFO: Total number of users2  
+[2021-04-15 08:18:57] local.ERROR: Undefined variable: request {"exception":"[object] (ErrorException(code: 0): Undefined variable: request at C:\\code\\laravel\\app\\Http\\Controllers\\MemberController.php:50)
+[stacktrace]
+#0 C:\\code\\laravel\\app\\Http\\Controllers\\MemberController.php(50): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(8, 'Undefined varia...', 'C:\\\\code\\\\laravel...', 50, Array)
+#1 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\MemberController->showOne(Object(Illuminate\\Http\\Request), 'suhas', 'suhas123')
+#2 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('showOne', Array)
+#3 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MemberController), 'showOne')
+#4 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
+#5 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(693): Illuminate\\Routing\\Route->run()
+#6 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#8 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#11 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#12 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#13 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#15 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(670): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#16 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#17 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#18 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#19 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\code\\laravel\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\code\\laravel\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#35 C:\\code\\laravel\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#36 C:\\code\\laravel\\server.php(21): require_once('C:\\\\code\\\\laravel...')
+#37 {main}
+"} 
+[2021-04-15 08:26:49] local.INFO: Display all users:   
+[2021-04-15 08:26:49] local.INFO: Total number of users2  
+[2021-04-15 08:34:53] local.INFO: Showing user details of : suhas  
+[2021-04-15 08:34:53] local.CRITICAL: some error: SQLSTATE[HY093]: Invalid parameter number (SQL: select member_id from members where member_name = suhas and password=?)  
+[2021-04-15 08:35:06] local.INFO: Showing user details of : suhas  
+[2021-04-15 08:35:06] local.CRITICAL: some error: SQLSTATE[HY093]: Invalid parameter number (SQL: select member_id from members where member_name = suhas and password=?)  
+[2021-04-15 08:36:42] local.INFO: Showing user details of : suhas  
+[2021-04-15 09:52:30] local.INFO: Display all users:   
+[2021-04-15 09:52:30] local.INFO: Total number of users2  
+[2021-04-15 09:53:19] local.INFO: Display all users:   
+[2021-04-15 09:53:19] local.INFO: Total number of users2  
+[2021-04-15 09:53:45] local.INFO: Display all users:   
+[2021-04-15 09:53:45] local.INFO: Total number of users2  
+[2021-04-15 09:55:53] local.INFO: Display all users:   
+[2021-04-15 09:55:53] local.INFO: Total number of users2  
+[2021-04-15 09:57:40] local.INFO: Display all users:   
+[2021-04-15 09:57:40] local.INFO: Total number of users2  
+[2021-04-15 10:22:56] local.INFO: Display all users:   
+[2021-04-15 10:22:56] local.INFO: Total number of users2  
+[2021-04-15 10:25:14] local.INFO: Display all users:   
+[2021-04-15 10:25:14] local.INFO: Total number of users2  
+[2021-04-15 10:26:12] local.INFO: Display all users:   
+[2021-04-15 10:26:12] local.INFO: Total number of users2  
+[2021-04-15 10:26:36] local.INFO: Display all users:   
+[2021-04-15 10:26:36] local.INFO: Total number of users2  
+[2021-04-15 10:27:21] local.INFO: Display all users:   
+[2021-04-15 10:27:21] local.INFO: Total number of users2  
+[2021-04-15 10:27:42] local.INFO: Display all users:   
+[2021-04-15 10:27:42] local.INFO: Total number of users2  
+[2021-04-15 10:27:56] local.INFO: Display all users:   
+[2021-04-15 10:27:56] local.INFO: Total number of users2  
+[2021-04-15 15:23:39] local.INFO: Display all users:   
+[2021-04-15 15:23:39] local.INFO: Total number of users2  
+[2021-04-16 01:52:10] local.INFO: Display all users:   
+[2021-04-16 01:52:10] local.INFO: Total number of users2  
+[2021-04-17 05:21:07] local.INFO: Display all users:   
+[2021-04-17 05:21:07] local.INFO: Total number of users2  
+[2021-04-17 05:23:42] local.INFO: Display all users:   
+[2021-04-17 05:23:42] local.INFO: Total number of users2  
+[2021-04-17 05:25:00] local.WARNING: input data missingsuhas  
+[2021-04-17 05:25:00] local.ERROR: Too few arguments to function App\Http\Controllers\MemberController::sendResponse(), 3 passed in C:\code\laravel\app\Http\Controllers\MemberController.php on line 104 and exactly 4 expected {"exception":"[object] (ArgumentCountError(code: 0): Too few arguments to function App\\Http\\Controllers\\MemberController::sendResponse(), 3 passed in C:\\code\\laravel\\app\\Http\\Controllers\\MemberController.php on line 104 and exactly 4 expected at C:\\code\\laravel\\app\\Http\\Controllers\\MemberController.php:14)
+[stacktrace]
+#0 C:\\code\\laravel\\app\\Http\\Controllers\\MemberController.php(104): App\\Http\\Controllers\\MemberController->sendResponse('input data miss...', 'incorrect reque...', 500)
+#1 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\MemberController->insert(Object(Illuminate\\Http\\Request))
+#2 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('insert', Array)
+#3 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MemberController), 'insert')
+#4 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
+#5 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(693): Illuminate\\Routing\\Route->run()
+#6 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#8 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#9 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#11 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#12 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#13 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#15 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(670): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#16 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#17 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#18 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#19 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\code\\laravel\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\code\\laravel\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#35 C:\\code\\laravel\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#36 C:\\code\\laravel\\server.php(21): require_once('C:\\\\code\\\\laravel...')
+#37 {main}
+"} 
+[2021-04-17 05:25:13] local.INFO: Display all users:   
+[2021-04-17 05:25:13] local.INFO: Total number of users2  
+[2021-04-17 05:25:21] local.INFO: Display all users:   
+[2021-04-17 05:25:21] local.INFO: Total number of users2  
+[2021-04-17 05:55:10] local.INFO: Display all users:   
+[2021-04-17 05:55:10] local.INFO: Total number of users2  
+[2021-04-17 05:57:00] local.INFO: Display all users:   
+[2021-04-17 05:57:00] local.INFO: Total number of users2  
+[2021-04-17 05:58:12] local.INFO: Display all users:   
+[2021-04-17 05:58:12] local.INFO: Total number of users2  
+[2021-04-17 06:35:35] local.INFO: Display all users:   
+[2021-04-17 06:35:35] local.INFO: Total number of users2  
+[2021-04-17 06:37:42] local.INFO: Showing user details of : 1  
+[2021-04-17 06:39:27] local.ERROR: Too few arguments to function App\Http\Controllers\MemberController::showTwo(), 2 passed in C:\code\laravel\vendor\laravel\framework\src\Illuminate\Routing\Controller.php on line 54 and exactly 3 expected {"exception":"[object] (ArgumentCountError(code: 0): Too few arguments to function App\\Http\\Controllers\\MemberController::showTwo(), 2 passed in C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php on line 54 and exactly 3 expected at C:\\code\\laravel\\app\\Http\\Controllers\\MemberController.php:48)
+[stacktrace]
+#0 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\MemberController->showTwo(Object(Illuminate\\Http\\Request), '1')
+#1 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('showTwo', Array)
+#2 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MemberController), 'showTwo')
+#3 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
+#4 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(693): Illuminate\\Routing\\Route->run()
+#5 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#6 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#7 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#10 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#11 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#12 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#14 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(670): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#15 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#16 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#17 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#18 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\code\\laravel\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\code\\laravel\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#33 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#34 C:\\code\\laravel\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#35 C:\\code\\laravel\\server.php(21): require_once('C:\\\\code\\\\laravel...')
+#36 {main}
+"} 
+[2021-04-17 06:39:32] local.ERROR: Too few arguments to function App\Http\Controllers\MemberController::showTwo(), 2 passed in C:\code\laravel\vendor\laravel\framework\src\Illuminate\Routing\Controller.php on line 54 and exactly 3 expected {"exception":"[object] (ArgumentCountError(code: 0): Too few arguments to function App\\Http\\Controllers\\MemberController::showTwo(), 2 passed in C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php on line 54 and exactly 3 expected at C:\\code\\laravel\\app\\Http\\Controllers\\MemberController.php:48)
+[stacktrace]
+#0 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\MemberController->showTwo(Object(Illuminate\\Http\\Request), '1')
+#1 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('showTwo', Array)
+#2 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(254): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MemberController), 'showTwo')
+#3 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(197): Illuminate\\Routing\\Route->runController()
+#4 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(693): Illuminate\\Routing\\Route->run()
+#5 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#6 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#7 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(103): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#10 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(55): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#11 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#12 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#13 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#14 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(670): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#15 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#16 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#17 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#18 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\code\\laravel\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\code\\laravel\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#33 C:\\code\\laravel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#34 C:\\code\\laravel\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#35 C:\\code\\laravel\\server.php(21): require_once('C:\\\\code\\\\laravel...')
+#36 {main}
+"} 
+[2021-04-17 07:30:05] local.INFO: Showing user details of : suhas  
+[2021-04-17 07:30:59] local.INFO: Showing user details of : suhas  
+[2021-04-17 07:31:38] local.INFO: Showing user details of : suhas  
+[2021-04-17 07:31:39] local.INFO: Display all users:   
+[2021-04-17 07:31:39] local.INFO: Total number of users2  
+[2021-04-24 05:46:23] local.INFO: Showing user details of : suhas  
+[2021-04-24 05:46:26] local.INFO: Display all users:   
+[2021-04-24 05:46:26] local.INFO: Total number of users2  
+[2021-04-24 05:47:29] local.INFO: Display all users:   
+[2021-04-24 05:47:29] local.INFO: Total number of users2  
+[2021-04-24 05:48:56] local.INFO: Showing user details of : suhas  
+[2021-04-24 05:48:57] local.INFO: Display all users:   
+[2021-04-24 05:48:57] local.INFO: Total number of users2  
+[2021-04-24 05:50:20] local.INFO: Showing user details of : rekha  
+[2021-04-24 06:17:10] local.INFO: Showing user details of : suhas  
+[2021-04-24 06:17:12] local.INFO: Display all users:   
+[2021-04-24 06:17:12] local.INFO: Total number of users2  
+[2021-04-24 06:18:36] local.INFO: Showing user details of : suhas  
+[2021-04-24 06:18:38] local.INFO: Display all users:   
+[2021-04-24 06:18:38] local.INFO: Total number of users2  
+[2021-04-24 06:23:34] local.INFO: Showing user details of : suhas  
+[2021-04-24 06:23:36] local.INFO: Display all users:   
+[2021-04-24 06:23:36] local.INFO: Total number of users2  
+[2021-04-24 06:27:55] local.INFO: Display all users:   
+[2021-04-24 06:27:55] local.INFO: Total number of users2  

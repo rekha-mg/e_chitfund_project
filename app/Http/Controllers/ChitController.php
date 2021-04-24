@@ -77,7 +77,7 @@ class ChitController extends Controller
     		$ending_date=$request->input('ending_date');
 
     		try{
-    			$resp = DB::insert('insert into chits (chit_name,capital_amount,total_members,monthly_payment,duration,start_date,ending_date) values(?,?,?,?,?,?,?)',[$chit_name,$capital_amount,$monthly_payment,$duration,$start_date,$ending_date]);
+    			$resp = DB::insert('insert into chits (chit_name,capital_amount,total_members,monthly_payment,duration,start_date,ending_date) values(?,?,?,?,?,?,?)',[$chit_name,$capital_amount,$total_members,$monthly_payment,$duration,$start_date,$ending_date]);
     			Log::info('Inserted new chit :'. $resp);
     		}	
 
