@@ -32,7 +32,7 @@
             if(name) {
                 $.ajax({
                     url:'/api/login/'+name+'/'+password,
-                    type: 'GET',
+                    type: 'POST',
                     success: function (response, textStatus, xhr) {
                         console.log(response);
                         if(response.data.length ===1 ) {
