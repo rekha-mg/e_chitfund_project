@@ -48,3 +48,26 @@ http://127.0.0.1:8000/api/chit/1
 
 ##### Delete Member (Delete){pass member_id}
 http://127.0.0.1:8000/api/Member/1
+---
+How to clone and run app.
+Setup:
+Make sure to install PHP 7.3 +
+Make sure to install composer
+- Run `composer install`
+- Run `php artisan key:generate` (This is one time thing.)
+- Run `php artisan config:cache`
+
+If no database has been installed or to do fresh install
+- RUn `php artisan config:cache `
+- Run `touch database/database.sqlite`
+- Run `php artisan migrate`
+- Run `php artisan migrate:status`
+
+To start server 
+- Run `php artisan serve `
+----
+How to create migration script to existing tables
+- https://stackoverflow.com/questions/63684110/create-migrations-from-database-in-laravel-7
+  `composer require --dev "kitloong/laravel-migrations-generator"`
+  `php artisan migrate:generate`
+  

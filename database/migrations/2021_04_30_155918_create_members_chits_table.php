@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class April extends Migration
+class CreateMembersChitsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,9 @@ class April extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('members_chits', function (Blueprint $table) {
+            $table->integer('id')->primary('primary');
+        });
     }
 
     /**
@@ -23,6 +25,6 @@ class April extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('members_chits');
     }
 }
