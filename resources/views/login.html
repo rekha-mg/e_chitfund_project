@@ -25,19 +25,23 @@
         $("#login").click(function () {
             var name = $('#name').val();
             var password=$('#password').val();
-
-           // console.log(name);
-           // console.log(password);
-
-            if(name) {
+             
+             if(name) {
                 $.ajax({
                     url:'/api/login/'+name+'/'+password,
                     type: 'POST',
                     success: function (response, textStatus, xhr) {
                         console.log(response);
                         if(response.data.length ===1 ) {
-                            alert("Login successfull :" + response.data[0].member_id);
-                            document.location.href="http://127.0.0.1:8000/viewdetails";
+                            alert("Login successfull :" + response.data[0].member_name);
+                            if(response.data[0].member_name=="admin"){
+                                 document.location.href="http://127.0.0.1:8000/adminviewdetails";
+
+                            }
+                            else{
+                                document.location.href="http://127.0.0.1:8000/userviewdetails";
+                            }
+                            
                         } else {
                             alert("plz login again... something is wrong");
                         }
@@ -54,7 +58,7 @@
                 alert("Please fill the form before submit login.");
             }
 
-            //alert("hi..");
+            
         });
 });
 

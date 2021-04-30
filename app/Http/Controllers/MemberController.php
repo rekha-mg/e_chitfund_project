@@ -51,7 +51,7 @@ class MemberController extends Controller
            
             try {
                 Log::info('Showing user details of : ' . $member_name);
-                $member_id = DB::select('select member_id from members where member_name = ? and password=?', [$member_name, $password]);
+                $member= DB::select('select member_id, member_name from members where member_name = ? and password=?', [$member_name, $password]);
             } catch (\PDOException $pex) {
                 Log::critical('some error: ' . print_r($pex->getMessage(), true) ); //xampp off
                 return $this->sendResponse("false", "", 'error related to database', 500);
@@ -63,7 +63,7 @@ class MemberController extends Controller
         } else {
             return $this->sendResponse("false", "", 'some error in user name', 500);
         }
-        return $this->sendResponse("true", $member_id, 'request completed', 200);
+        return $this->sendResponse("true", $member, 'request completed', 200);
     }
 
 public function showOne(Request $request,$member_id)

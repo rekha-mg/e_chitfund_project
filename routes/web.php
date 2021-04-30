@@ -33,6 +33,10 @@ Route::get('/index', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/viewdetails', function () {
-    return view('viewdetails');
+Route::get('/userviewdetails', function () {
+    return view('user_viewdetails');
+});
+
+Route::get('/adminviewdetails', function () {
+    return view('admin_viewdetails');
 });
