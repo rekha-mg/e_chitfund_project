@@ -88,11 +88,12 @@ public function showOne(Request $request,$member_id)
     }
     public function insert(Request $request)
     {
-       if ($request->has('member_name') && $request->has('dob') && $request->has('phone') &&
+       if ($request->has('member_name') && $request->has('password') && $request->has('dob') && $request->has('phone') &&
        	   $request->has('occupation') && $request->has('address') && $request->has('email_id') &&
        	   $request->has('adhar_card') && $request->has('pancard')) {
 
             $member_name = $request->input('member_name');
+            $password=$request->input('password');
             $dob = $request->input('dob');
             $phone_num = $request->input('phone');
             $occupation = $request->input('occupation');
@@ -102,7 +103,7 @@ public function showOne(Request $request,$member_id)
             $pan_number=$request->input('pancard');
 
             try {
-                $resp = DB::insert('insert into members (member_name,dob,occupation,phone,address,email_id, adhar_card,pancard) values (?,?,?,?,?,?,?,?)', [$member_name, $dob, $occupation, $phone_num, $address, $email_id, $adhar_number, $pan_number]);
+                $resp = DB::insert('insert into members (member_name,password,dob,occupation,phone,address,email_id, adhar_card,pancard) values (?,?,?,?,?,?,?,?,?)', [$member_name, $password,$dob, $occupation, $phone_num, $address, $email_id, $adhar_number, $pan_number]);
 
 
                 Log::info('Inserted new user: ' . $resp);

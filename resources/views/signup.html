@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <style type="text/css">
         body{
             background-color: #007bff;
@@ -29,7 +29,8 @@
 
     </style>
     <script>
-        function validate(){
+          var person={};
+     function validateform(){
             var firstName=$('#firstName').val();
             var lastName=$('#lastName').val();
             var password1=$('#password1').val();
@@ -42,40 +43,35 @@
             var adhar=$('#adhar').val();
             var pancard=$('#pancard').val();
 
-            var person={};
-            person.firstName=firstName;
-            person.lastName=lastName;
-            person.password1=password1;
-            person.password2=password2;
+          
+            person.membername=firstName;
+            person.password=password1;
             person.dob=dob;
-            person.occupation=occupation;
             person.phone=phone;
+            person.occupation=occupation;
             person.address=address;
-            person.email=email;
-            person.adhar=adhar;
-            person.pancard=pancard;
+            person.email_id=email;
+            person.adhar_number=adhar;
+            person.pan_number=pancard;
 
             console.log(person);
-            if(password1 === password2){
-                return true;
-
-            }else{
+            /*if(password1 != password2){
                 alert("password mismatch ... plz enter again");
                 $('#password1').val()="";
                 $('#password2').val()="";
                 $('#password1').focus();
                 return false;
             }
-
             if(person.phone.toString().length < 10){
                 alert("Enter  your 10 digit mobile number");
                 return false;
-            }
+            } 
             if(person.adhar.toString().length <12 ){
                 alert("Enter your 12 adhar number");
                 return false;
             }
-
+             return( true ); */
+         
 
         }
 
@@ -83,11 +79,21 @@
         $(document).ready(function() {
 
             $("#signup").click(function () {
+                validateform();
+                /*f(validateform()){
+                    alert("done with validateform");
+                }
+                else
+                {
+                    alert("something is wrong in validate");
+                }*/
 
-                if(validate()){
-                    $.ajax({
-                        url:'/api/login/'+name+'/'+password,
+
+            
+                       $.ajax({
+                        url:'/api/members',
                         type: 'POST',
+                        data: person,
                         success: function (response, textStatus, xhr) {
                             console.log(response);
                             if(response.data.length ===1 ) {
@@ -104,8 +110,8 @@
                                 alert("something wrong happened");
                             }
                         }
-                    });
-                }
+                   });
+                             
             });
         });
 
@@ -139,18 +145,18 @@
         </div>
 
 
-        <form action="">
+        <form name="myform" >
             <div class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="pwd">First name</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="First name"  aria-label="First name" required>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name"  aria-label="First name" required>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group">
                         <label for="pwd">Last name</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="Last name" aria-label="Last name" required>
+                        <input type="text" class="form-control" id="lastName"  name="lastName"  placeholder="Last name" aria-label="Last name" required>
                     </div>
                 </div>
             </div>
@@ -233,7 +239,7 @@
                 </label>
             </div>
 
-            <button type="submit" class="btn btn-primary" id="signup">Submit</button>
+            <input type="submit" class="btn btn-primary" id="signup" value="Register">
         </form>
 
 
