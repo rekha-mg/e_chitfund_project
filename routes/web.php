@@ -40,3 +40,15 @@ Route::get('/userviewdetails', function () {
 Route::get('/adminviewdetails', function () {
     return view('admin_viewdetails');
 });
+
+Route::get('/adminviewdetails2', function () {
+    return view('admin_viewdetails2');
+});
+
+Route::get('/luckylakshmi_viewdetails', function () {
+    return view('luckylakshmi_viewdetails');
+});
+
+Route::get('/chitform', function () {
+    return view('chitform');
+});

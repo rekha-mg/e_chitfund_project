@@ -8,21 +8,59 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
     <style type="text/css">
         body{
-            background-color: #007bff;
-            background-image: url("http://localhost/laravel/images/money.jpg");
+            background-color: #FFFAFA;
+           
+           /*background-image: url("http://localhost/laravel/images/money.jpg"); */
         }
         li{
             padding: 4px;
         }
         a{
-            color: black;
+            color: white;
         }
+        #tab{
+                margin: 80px;
+                margin-left: 140px;
+                width: 80%;
+                border-radius: 5px;
+                box-shadow: 5px 5px #adb5bd;
+                border: 2px solid var(--white);
+                background-color: var(--blue);
+            }
+
 
     </style>
     <script>
-       
+        function display_members(){
+            $("#tab").empty();
+            var table_content='';
+        $.ajax({
+            url:'/api/members/',
+            type: 'GET',
+
+            success: function (response) {
+                 console.log(response);
+                console.log(response.data.length);
+                table_content='<table class="table table-hover"><thead><tr><th>Name</th>';
+                 table_content+='<th>Phone</th><th>Email</th></tr></thead><tbody>';
+
+                for( i=0;i<response.data.length;i++) {
+                    table_content+='<tr>';
+                    table_content+='<td>'+response.data[i].member_name+'</td>';
+                    table_content+='<td>'+response.data[i].phone+'</td>';
+                    table_content+='<td>'+response.data[i].email_id+'</td> </tr>';
+
+                }
+                $("#tab").append(table_content);
+            }
+
+        });
+        }
         
         function subscribe(){
             alert("table will be generated...");
@@ -44,7 +82,7 @@
 
                 for( i=0;i<response.data.length;i++) {
                     table_content+='<tr>';
-                    table_content+='<td><a href=http://127.0.0.1:8000/index>'+response.data[i].chit_name+'</a></td>';
+                    table_content+='<td><a href=http://127.0.0.1:8000/luckylakshmi>'+response.data[i].chit_name+'</a></td>';
                     table_content+='<td>'+response.data[i].capital_amount+'</td>';
                     table_content+='<td>'+response.data[i].total_members+'</td> ';
                      table_content+='<td><button type="button" class="btn  btn-info" onclick="subscribe();">Subscribe</button> </td> </tr>';
@@ -63,22 +101,28 @@
 
 <div class="container">
     <div id="first_div">
-        <h1>Chit Funds</h1>
+        <h1>Chit Funds </h1>
+
     </div>
     <div>
-        <nav class="navbar navbar-expand-sm bg-secondary">
+        <nav class="navbar navbar-expand-sm bg-primary">
             <ul class="navbar-nav">
-                 <li class="nav-item">
-                               </li>
-                <li class="nav-item">
-                <button type="button" class="btn  btn-info" onclick="display_chits();">View Chits</button>
+                 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">View</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#" onclick="display_members();" >Members</a>
+                        <a class="dropdown-item" href="#" onclick="display_chits();">chits</a>
+                    </div>
                 </li>
-                <li class="nav-item">
+                 <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:8000/index">Logout</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:8000/contact">Contact Us</a>
                 </li>
+    </div>
+  </li>
 
             </ul>
         </nav>

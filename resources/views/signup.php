@@ -29,8 +29,9 @@
 
     </style>
     <script>
-          var person={};
-     function validateform(){
+        var person={};
+        function validateform(){
+            
             var firstName=$('#firstName').val();
             var lastName=$('#lastName').val();
             var password1=$('#password1').val();
@@ -87,9 +88,7 @@
                 {
                     alert("something is wrong in validate");
                 }*/
-
-
-            
+      
                        $.ajax({
                         url:'/api/members',
                         type: 'POST',

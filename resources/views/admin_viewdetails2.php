@@ -97,12 +97,17 @@
                 <li class="nav-item">
                 <button type="button" class="btn  btn-info" onclick="display_chits();">View Chits</button>
                 </li>
+
+                 <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/chitform">Monthly Payment</a>
+                </li>
+                
+
                 <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:8000/index">Logout</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:8000/contact">Contact Us</a>
-                </li>
+                
+                
 
             </ul>
         </nav>

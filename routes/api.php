@@ -34,8 +34,19 @@ Route::post('/chits', 'App\Http\Controllers\ChitController@insert');
 Route::patch('/chits/{chit_id}', 'App\Http\Controllers\ChitController@edit');
 Route::delete('/chits/{chit_id}', 'App\Http\Controllers\ChitController@destroy');
 
-Route::post('/payments/{chit_id}/{member_id}','App\Http\Controllers\PaymentController@newtable');
+//Route::post('/payments/{chit_id}/{member_id}','App\Http\Controllers\PaymentController@newtable');
 
 
+Route::get('/luckylakshmi','App\Http\Controllers\luckylakshmi@showAll');
 
+Route::get('/luckylakshmi/{id}','App\Http\Controllers\luckylakshmi@showOne');
+Route::post('/luckylakshmi', 'App\Http\Controllers\luckylakshmi@insert');
+Route::patch('/luckylakshmi/{id}', 'App\Http\Controllers\luckylakshmi@edit');
+Route::delete('/luckylakshmi/{id}', 'App\Http\Controllers\luckylakshmi@destroy');
+
+Route::get('/monthly_chitamount','App\Http\Controllers\monthly_chitamount@showAll');
+Route::get('/monthly_chitamount/{id}','App\Http\Controllers\monthly_chitamount@showOne');
+Route::post('/monthly_chitamount', 'App\Http\Controllers\monthly_chitamount@insert');
+Route::patch('/monthly_chitamount/{id}', 'App\Http\Controllers\monthly_chitamount@edit');
+Route::delete('/monthly_chitamount/{id}', 'App\Http\Controllers\monthly_chitamount@destroy');
 
