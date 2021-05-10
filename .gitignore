@@ -11,3 +11,6 @@ npm-debug.log
 yarn-error.log
 .idea/
 vendor/*
+.editorconfig
+.gitattributes
+.styleci.yml
