@@ -25,7 +25,7 @@
     }
     
      #chitform{
-        padding-top: 100px;
+        padding-top: 60px;
         width: 75%;
         margin-left: 200px;
      }
@@ -49,13 +49,14 @@
 
 </style>
 <script>
-    var monthly_data={};
+    var payment={};
     var chit_id;
     var member_id;
     var chit_name;
     var amount;
     var paid_date;
     var due_date;
+    var is_late_paid;
 
     $( document ).ready(function() {
      
@@ -63,9 +64,9 @@
         display_members();//load to dropdown member names
 
         // get the chitname from dropdown
-        $('#chitnames').on('change',function() {
+        $('#chitNames').on('change',function() {
             chit_name=$(this).val();
-            console.log("chit_name"+chit_name);
+           
         });
 
 
@@ -102,8 +103,8 @@
 
      // Load dropdown with chit names
     function display_chitsnames(){
-        $("#tab").empty();
-        var table_content='';
+      
+       
         $.ajax({
             url:'/api/chits/',
             type: 'GET',
@@ -127,23 +128,38 @@
         amount=$('#amount').val();
         paid_date=$('#paid_date').val();
         due_date=$('#due_date').val();
+        if(paid_date > due_date){
+            is_late_paid=1;
+        }
+        else
+        {
+            is_late_paid=0;
+        }
 
+        //var chit_month = due_date.getMonth();
+        var chit_month=5;
 
-        monthly_data.chit_name=chit_name;
-        monthly_data.chit_number=1;
-        monthly_data.member_id=member_id;
-        monthly_data.amount_paid=amount;
-        monthly_data.paid_date=paid_date;
-        monthly_data.due_date=due_date;
-        console.log(monthly_data);
+        payment.member_id=member_id;
+        payment.chit_id=1;
+        payment.chit_name=chit_name;
+        payment.amount=amount;
+        payment.paid_date=paid_date;
+        payment.due_date=due_date;
+        payment.is_late_paid=is_late_paid;
+        payment.chit_month=chit_month;
+        payment.installment_number="1";
+
+        console.log(payment);
 
                     $.ajax({
-                        url:'/api/monthly_chitamount',
+                        url:'/api/payment',
                         type: 'POST',
-                        data: monthly_data,
+                        data: payment,
                         success: function (response, textStatus, xhr) {
                             console.log(response);
-                           if(response.data.length ===1 ) {
+
+                            
+                           /*if(response.data.length >0 ) {
                                 alert("submitted successfull :" );
                                 //document.location.href="";
                             } else {
@@ -156,7 +172,7 @@
                             } else {
                                 alert("something wrong happened");
                             }
-                        }
+                        }*/
                    });
 
 }

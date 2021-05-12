@@ -65,19 +65,19 @@ class ChitController extends Controller
     }
 
     public function insert(Request $request){
-    	if($request->has('chit_name')&& $request->has('capital_amount') && $request->has('total_members') && $request->has('monthly_payment') && $request->has('duration') && $request->has('start_date') && $request->has('ending_date'))
+    	if($request->has('chit_name')&& $request->has('capital_amount') && $request->has('total_members') && $request->has('payment') && $request->has('duration') && $request->has('start_date') && $request->has('ending_date'))
     	{
     		
     		$chit_name =$request->input('chit_name');
     		$capital_amount=$request->input('capital_amount');
     		$total_members=$request->input('total_members');
-    		$monthly_payment=$request->input('monthly_payment');
+    		$payment=$request->input('payment');
     		$duration=$request->input('duration');
     		$start_date=$request->input('start_date');
     		$ending_date=$request->input('ending_date');
 
     		try{
-    			$resp = DB::insert('insert into chits (chit_name,capital_amount,total_members,monthly_payment,duration,start_date,ending_date) values(?,?,?,?,?,?,?)',[$chit_name,$capital_amount,$total_members,$monthly_payment,$duration,$start_date,$ending_date]);
+    			$resp = DB::insert('insert into chits (chit_name,capital_amount,total_members,payment,duration,start_date,ending_date) values(?,?,?,?,?,?,?)',[$chit_name,$capital_amount,$total_members,$payment,$duration,$start_date,$ending_date]);
     			Log::info('Inserted new chit :'. $resp);
     		}	
 
@@ -102,18 +102,18 @@ class ChitController extends Controller
 
 	public function edit(Request $request, $chit_id)
     {
-        if ($request->has('chit_name')&& $request->has('capital_amount') && $request->has('total_members') && $request->has('monthly_payment') && $request->has('duration') && $request->has('start_date') && $request->has('ending_date')){
+        if ($request->has('chit_name')&& $request->has('capital_amount') && $request->has('total_members') && $request->has('payment') && $request->has('duration') && $request->has('start_date') && $request->has('ending_date')){
 
         	$chit_name =$request->input('chit_name');
     		$capital_amount=$request->input('capital_amount');
     		$total_members=$request->input('total_members');
-    		$monthly_payment=$request->input('monthly_payment');
+    		$payment=$request->input('payment');
     		$duration=$request->input('duration');
     		$start_date=$request->input('start_date');
     		$ending_date=$request->input('ending_date');
 
     		try{
-    			$resp = DB::update('update chits set chit_name  = ?, capital_amount = ? ,total_members=?, monthly_payment=?, duration=?, start_date=?, ending_date=?  where chit_id = ?',[$chit_name,$capital_amount,$total_members, $monthly_payment,$duration,$start_date,$ending_date,$chit_id]);
+    			$resp = DB::update('update chits set chit_name  = ?, capital_amount = ? ,total_members=?, payment=?, duration=?, start_date=?, ending_date=?  where chit_id = ?',[$chit_name,$capital_amount,$total_members, $payment,$duration,$start_date,$ending_date,$chit_id]);
     			Log::info('updated chit :'. $chit_id);
     		}	
 

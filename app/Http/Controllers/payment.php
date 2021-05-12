@@ -1,17 +1,15 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use DB;
 
-
-class monthly_chitamount extends Controller
+class payment extends Controller
 {
     //
-     public function sendResponse($success, $result, $message, $response_code)
+    public function sendResponse($success, $result, $message, $response_code)
 	{
 		$response = [
 			'success' => true,
@@ -23,16 +21,16 @@ class monthly_chitamount extends Controller
 
 	public function showAll(Request $request)
 	{
-		Log::info('Display all monthly_chitamount: ');
+		Log::info('Display all payment: ');
 
 		try {
-			$res = DB::select('select count(*) as total from  monthly_chitamount');
-			Log::info('Total number of luckylakshmi ' . $res[0]->total);
-			$total_luckylakshmi = $res[0]->total;
-			if ($total_luckylakshmi > 5) {
-				$list = DB::select('select * from  monthly_chitamount limit ?', [$limit]);
+			$res = DB::select('select count(*) as total from  payments');
+			Log::info('Total number of payments ' . $res[0]->total);
+			$payments = $res[0]->total;
+			if ($payments > 5) {
+				$list = DB::select('select * from  payments limit ?', [$limit]);
 			} else {
-				$list = DB::select('select *  from  monthly_chitamount');
+				$list = DB::select('select *  from  payments');
 			}
 		} catch (\PDOException $pex) {
            Log::critical('some error: ' . print_r($pex->getMessage(), true)); //xampp off
@@ -50,9 +48,10 @@ class monthly_chitamount extends Controller
    public function showOne($id)
    {
    	if ($id > 0) {
+
    		try {
-   			Log::info('Showing chit details of monthly_chitamount : ' . $id);
-   			$list = DB::select('select * from monthly_chitamount where id = ?', [$id]);
+   			Log::info('Showing chit details of payment : ' . $id);
+   			$list = DB::select('select * from payments where id = ?', [$id]);
    		} catch (\PDOException $pex) {
                 Log::critical('some error: ' . print_r($pex->getMessage(), true)); //xampp off
                 return $this->sendResponse("false", "", 'error related to database', 500);
@@ -68,20 +67,22 @@ class monthly_chitamount extends Controller
     }
 
     public function insert(Request $request){
-    	if($request->has('chit_name')&& $request->has('chit_number')  && $request->has('member_id') && $request->has('amount_paid')  && $request->has('paid_date') && $request->has('due_date') ) {
+    	if( $request->has('member_id') && $request->has('chit_id') && $request->has('chit_name')  && $request->has('amount')  && $request->has('paid_date') && $request->has('due_date') && $request->has('is_late_paid') && $request->has('chit_month') && $request->has('installment_number') ) {
 
-    		$chit_name=$request->input('chit_name');
-    		$chit_number=$request->input('chit_number');
     		$member_id=$request->input('member_id');
-    		$amount_paid=$request->input('amount_paid');
+    		$chit_id=$request->input('chit_id');
+    		$chit_name=$request->input('chit_name');
+    		$amount=$request->input('amount');
     		$paid_date=$request->input('paid_date');
     		$due_date =$request->input('due_date');
-    		
-
+    		$is_late_paid=$request->input('is_late_paid');
+    		$chit_month =$request->input('chit_month');
+    		$installment_number =$request->input('installment_number');
     		try{
     					
-    			$resp = DB::insert('insert into monthly_chitamount (chit_name,chit_number,member_id,amount_paid,paid_date,due_date) values(?,?,?,?,?,?)',[$chit_name,$chit_number,$member_id,$amount_paid,$paid_date,$due_date]);
-    			Log::info('Paid  chit :'. $resp);
+    			$resp = DB::insert('insert into payments (member_id,chit_id,chit_name,amount,
+    				paid_date,due_date,is_late_paid,chit_month,installment_number) values(?,?,?,?,?,?,?,?,?)',[$member_id,$chit_id,$chit_name,$amount,$paid_date,$due_date,$is_late_paid,$chit_month,$installment_number]);
+    			Log::info('Paid  chit : '.$resp);
     		}	
 
     		catch(\PDOException $pex){
@@ -97,8 +98,8 @@ class monthly_chitamount extends Controller
 		
 	
 		else{
-				Log::waring('input data missing' .print_r($request->input('bid_amount'),true));
-    			return $this->sendResponse("input data missing", 'incoorect request', 500); //wrong field name
+				Log::waring('input data missing' .print_r($request->input('chit_month'),true));
+    			return $this->sendResponse("input data missing","", 'incorrect request', 500); //wrong field name
     		}
     			return $this->sendResponse("true",$resp,'data inserted successfully', 201);
 
@@ -118,7 +119,7 @@ class monthly_chitamount extends Controller
     		$due_date =$request->input('due_date');
 
     		try{
-    			$resp = DB::update('update monthly_chitamount set chit_name  = ?, chit_number = ? ,member_id=?, amount_paid=?, paid_date=?, due_date=?  where id = ?',[$chit_name,$chit_number,$member_id, $amount_paid,$paid_date,$due_date,$id]);
+    			$resp = DB::update('update payment set chit_name  = ?, chit_number = ? ,member_id=?, amount_paid=?, paid_date=?, due_date=?  where id = ?',[$chit_name,$chit_number,$member_id, $amount_paid,$paid_date,$due_date,$id]);
     			Log::info('updated lucky lakshmi chit :'. $id);
     		}	
 
@@ -144,7 +145,7 @@ public function destroy($id){
     if($id >0 && $id<20){
         try{
         		
-        		$resp=DB::update('update monthly_chitamount set is_deleted  = ? where id = ?',['1',$id]);
+        		$resp=DB::update('update payment set is_deleted  = ? where id = ?',['1',$id]);
         	}
         catch(\PDOException $pex){
         	Log::critical('some error:'.print_r($pex->getMessage(),true));//xampp off

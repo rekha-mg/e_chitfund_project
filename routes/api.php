@@ -44,9 +44,10 @@ Route::post('/luckylakshmi', 'App\Http\Controllers\luckylakshmi@insert');
 Route::patch('/luckylakshmi/{id}', 'App\Http\Controllers\luckylakshmi@edit');
 Route::delete('/luckylakshmi/{id}', 'App\Http\Controllers\luckylakshmi@destroy');
 
-Route::get('/monthly_chitamount','App\Http\Controllers\monthly_chitamount@showAll');
-Route::get('/monthly_chitamount/{id}','App\Http\Controllers\monthly_chitamount@showOne');
-Route::post('/monthly_chitamount', 'App\Http\Controllers\monthly_chitamount@insert');
-Route::patch('/monthly_chitamount/{id}', 'App\Http\Controllers\monthly_chitamount@edit');
-Route::delete('/monthly_chitamount/{id}', 'App\Http\Controllers\monthly_chitamount@destroy');
+Route::get('/payment','App\Http\Controllers\payment@showAll');
+Route::get('/payment/{id}','App\Http\Controllers\payment@showOne');
+Route::post('/payment', 'App\Http\Controllers\payment@insert');
+Route::patch('/payment/{id}', 'App\Http\Controllers\payment@edit');
+Route::delete('/payment/{id}', 'App\Http\Controllers\payment@destroy');
 
+Route::post('/subscriber', 'App\Http\Controllers\SubscriberController@insert');
