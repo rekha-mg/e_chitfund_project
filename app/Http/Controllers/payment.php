@@ -45,6 +45,27 @@ class payment extends Controller
         
    }
 
+    public function showchit($chitname)
+   {
+    if ($chitname) {
+
+      try {
+        Log::info('Showing chit details of payment : ' . $chitname);
+        $list = DB::select('select * from payments where chit_name = ?', [$chitname]);
+      } catch (\PDOException $pex) {
+                Log::critical('some error: ' . print_r($pex->getMessage(), true)); //xampp off
+                return $this->sendResponse("false", "", 'error related to database', 500);
+            } catch (\Exception $e) {
+              Log::critical('some error: ' . print_r($e->getMessage(), true));
+              Log::critical('error line: ' . print_r($e->getLine(), true));
+              return $this->sendResponse("false", "", 'some error in server', 500);
+            }
+        } else {
+          return $this->sendResponse("false", "", 'some error in user id', 500);
+        }
+        return $this->sendResponse("true", $list, 'request completed', 200);
+    }
+
    public function showOne($id)
    {
    	if ($id > 0) {

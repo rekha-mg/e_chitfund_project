@@ -36,25 +36,68 @@
 
     </style>
     <script>
-        function display_luckylakshmi(){
+
+
+        $( document ).ready(function() {
+     
+          
+            display_chitsnames();//load to dropdown chit names
+            display_members();//load to dropdown member names
+
+        // get the chitname from dropdown
+        $('#chitNames').on('change',function() {
+            chit_name=$(this).val();
+            console.log("chit id - ".chit_name);
+
+            display_chits(chit_name);
+
+             // get the member name from dropdown
+        $('#memberName').on('change',function() {
+            member_id=$(this).val();
+            console.log("member_id"+member_id);
+        });
+
+           
+        });
+
+         });
+
+
+        function display_members(){
+        $("#tab").empty();
+        var table_content='';
+        $.ajax({
+            url:'/api/members/',
+            type: 'GET',
+            success: function (response) {
+            option_content="";
+            for( i=0;i<response.data.length;i++) {
+                option_content+='<option value='+response.data[i].member_id+'>'+response.data[i].member_name+'</option>';
+            } 
+            $("#memberName").append( option_content);
+         }
+
+     });
+    }
+        function display_chits(chit_name){
             $("#tab").empty();
             var table_content='';
         $.ajax({
-            url:'/api/luckylakshmi/',
+            url:'/api/payments/'+chit_name,
             type: 'GET',
 
             success: function (response) {
                  console.log(response);
                 console.log(response.data.length);
-                table_content='<table class="table table-hover"><thead><tr><th>due_date</th>';
-                 table_content+='<th>bid_amount</th><th>commission</th><th>bid_member</th></tr></thead><tbody>';
+                table_content='<table class="table table-hover"><thead><tr><th>Id</th>';
+                 table_content+='<th>member id </th><th>amount</th><th>chit month</th></tr></thead><tbody>';
 
                 for( i=0;i<response.data.length;i++) {
                     table_content+='<tr>';
-                    table_content+='<td>'+response.data[i].due_date+'</td>';
-                    table_content+='<td>'+response.data[i].bid_amount+'</td>';
-                     table_content+='<td>'+response.data[i].commission+'</td>';
-                    table_content+='<td>'+response.data[i].bid_member+'</td> </tr>';
+                    table_content+='<td>'+response.data[i].id+'</td>';
+                    table_content+='<td>'+response.data[i].member_id+'</td>';
+                     table_content+='<td>'+response.data[i].amount+'</td>';
+                    table_content+='<td>'+response.data[i].chit_month+'</td> </tr>';
 
                 }
                 $("#tab").append(table_content);
@@ -67,6 +110,26 @@
             alert("table will be generated...");
 
         }
+
+
+
+        function display_chitsnames(){
+           
+        $.ajax({
+            url:'/api/chits/',
+            type: 'GET',
+            success: function (response) {
+          
+            option_content="";
+            for( i=0;i<response.data.length;i++) {
+                option_content+='<option value='+response.data[i].chit_name+'>'+response.data[i].chit_name+'</option>';
+            }
+            $("#chitNames").append(option_content);
+        }
+    });
+          
+         
+}
 
          
 
@@ -83,11 +146,18 @@
     <div>
         <nav class="navbar navbar-expand-sm bg-primary">
             <ul class="navbar-nav">
-                 
-                
+                  
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="display_luckylakshmi();" >Chit LuckyLakshmi </a>
+                     <select  id="chitNames" name="chitname" >
+                    <option value="">Select the Chit Name</option>
+                  </select> 
+                </li>
+
+                <li class="nav-item">
+                    <select  id="memberName" name="chitname" >
+                        <option value="">Select the Member Name</option>
+                    </select> 
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:8000/adminviewdetails">Back</a>
@@ -108,9 +178,11 @@
 
     </div>
 
+       
+    
         <div id="tab">
 
-
+ 
         </div>
 
 

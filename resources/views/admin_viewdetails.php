@@ -82,7 +82,7 @@
 
                 for( i=0;i<response.data.length;i++) {
                     table_content+='<tr>';
-                    table_content+='<td><a href=http://127.0.0.1:8000/luckylakshmi_viewdetails>'+response.data[i].chit_name+'</a></td>';
+                    table_content+='<td><a href=http://127.0.0.1:8000/chit_viewdetails>'+response.data[i].chit_name+'</a></td>';
                     table_content+='<td>'+response.data[i].capital_amount+'</td>';
                     table_content+='<td>'+response.data[i].total_members+'</td> ';
                      table_content+='<td><button type="button" class="btn  btn-info" onclick="subscribe();">Subscribe</button> </td> </tr>';
@@ -117,6 +117,10 @@
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:8000/chitform">Monthly Payment</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Subscribers</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:8000/index">Logout</a>

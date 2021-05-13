@@ -51,7 +51,8 @@
 <script>
     var payment={};
     var chit_id;
-    var member_id;
+    var member_id; display_chitsnames();//load to dropdown chit names
+        display_members();//load to dropdown member names
     var chit_name;
     var amount;
     var paid_date;
@@ -60,8 +61,7 @@
 
     $( document ).ready(function() {
      
-        display_chitsnames();//load to dropdown chit names
-        display_members();//load to dropdown member names
+       
 
         // get the chitname from dropdown
         $('#chitNames').on('change',function() {
@@ -156,23 +156,24 @@
                         type: 'POST',
                         data: payment,
                         success: function (response, textStatus, xhr) {
-                            console.log(response);
+                           
+                           if(textStatus){
+                                alert(" successfully inserted..");
+                            }
+                            else
+                                alert("something went wrong");
+
+                       } ,
+                       error: function (response, textStatus, errorThrown) {
+                        if (response && response.responseJSON && response.responseJSON.message) {
+                            alert(response.responseJSON.message);
+                        } else {
+                            alert("something wrong happened");
+                        }
+                    }
 
                             
-                           /*if(response.data.length >0 ) {
-                                alert("submitted successfull :" );
-                                //document.location.href="";
-                            } else {
-                                alert("plz fill form again... something is wrong");
-                            }
-                        },
-                        error: function (response, textStatus, errorThrown) {
-                            if (response && response.responseJSON && response.responseJSON.message) {
-                                alert(response.responseJSON.message);
-                            } else {
-                                alert("something wrong happened");
-                            }
-                        }*/
+                           
                    });
 
 }

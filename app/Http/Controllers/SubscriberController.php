@@ -25,18 +25,45 @@ class SubscriberController extends Controller
         return response()->json($response, $response_code);
     }
 
+
+    public function showAll($limit)
+    {
+        Log::info('Display all subscribers: ');
+
+        try {
+            $res = DB::select('select count(*) as total from subscribers');
+            Log::info('Total number of subscribers ' . $res[0]->total);
+            $total_subscribers = $res[0]->total;
+            if ($total_subscribers > 5) {
+                $chit_list = DB::select('select * from subscribers limit ?', [$limit]);
+            } else {
+                $chit_list = DB::select('select * from subscribers where is_approved = ?', [0]);
+            }
+        } catch (\PDOException $pex) {
+           Log::critical('some error: ' . print_r($pex->getMessage(), true)); //xampp off
+           return $this->sendResponse("false", "", 'error related to database', 500);
+       } catch (\Exception $e) {
+        Log::critical('some error: ' . print_r($e->getMessage(), true));
+        Log::critical('error line: ' . print_r($e->getLine(), true));
+        return $this->sendResponse("false", "", 'some error in server', 500);
+       }
+       return $this->sendResponse("true", $chit_list, 'request completed', 200);
+
+        //echo("its a chit controller");
+   }
+
     public function insert(Request $request)
     {
-       if ($request->has('chit_id') && $request->has('member_id') && $request->has('subscribed_date') && $request->has('is_approved') ) {
+       if ($request->has('chit_id') && $request->has('member_id') && $request->has('subscribed_date')  ) {
 
             $chit_id = $request->input('chit_id');
             $member_id=$request->input('member_id');
             $subscribed_date = $request->input('subscribed_date');
-            $is_approved = $request->input('is_approved');
+           
             
 
             try {
-                $resp = DB::insert('insert into subscribers (chit_id,member_id,subscribed_date,is_approved) values (?,?,?,?)', [$chit_id, $member_id,$subscribed_date, $is_approved ]);
+                $resp = DB::insert('insert into subscribers (chit_id,member_id,subscribed_date) values (?,?,?)', [$chit_id, $member_id,$subscribed_date]);
 
 
                 Log::info('Inserted new user: ' . $resp);

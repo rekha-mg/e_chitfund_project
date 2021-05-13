@@ -28,6 +28,8 @@ Route::post('/members', 'App\Http\Controllers\MemberController@insert');
 Route::patch('/members/{member_id}', 'App\Http\Controllers\MemberController@edit');
 Route::delete('/members/{member_id}', 'App\Http\Controllers\MemberController@destroy');
 
+//Route::post('/session','App\Http\Controllers\MemberController@store');
+
 Route::get('/chits', 'App\Http\Controllers\ChitController@showAll');
 Route::get('/chits/{chit_id}', 'App\Http\Controllers\ChitController@showOne');
 Route::post('/chits', 'App\Http\Controllers\ChitController@insert');
@@ -37,17 +39,22 @@ Route::delete('/chits/{chit_id}', 'App\Http\Controllers\ChitController@destroy')
 //Route::post('/payments/{chit_id}/{member_id}','App\Http\Controllers\PaymentController@newtable');
 
 
-Route::get('/luckylakshmi','App\Http\Controllers\luckylakshmi@showAll');
 
-Route::get('/luckylakshmi/{id}','App\Http\Controllers\luckylakshmi@showOne');
-Route::post('/luckylakshmi', 'App\Http\Controllers\luckylakshmi@insert');
-Route::patch('/luckylakshmi/{id}', 'App\Http\Controllers\luckylakshmi@edit');
-Route::delete('/luckylakshmi/{id}', 'App\Http\Controllers\luckylakshmi@destroy');
 
 Route::get('/payment','App\Http\Controllers\payment@showAll');
 Route::get('/payment/{id}','App\Http\Controllers\payment@showOne');
+
+Route::get('/payments/{chitname}','App\Http\Controllers\payment@showchit');// display on chitnames
+
+
 Route::post('/payment', 'App\Http\Controllers\payment@insert');
 Route::patch('/payment/{id}', 'App\Http\Controllers\payment@edit');
 Route::delete('/payment/{id}', 'App\Http\Controllers\payment@destroy');
 
 Route::post('/subscriber', 'App\Http\Controllers\SubscriberController@insert');
+Route::get('/subscriber', 'App\Http\Controllers\SubscriberController@showAll');
+
+
+//Route::get('session/get','App\Http\Controllers\SessionController@accessSessionData');
+//Route::post('session/set','App\Http\Controllers\SessionController@storeSessionData');
+//Route::get('session/remove','App\Http\Controllers\SessionController@deleteSessionData');

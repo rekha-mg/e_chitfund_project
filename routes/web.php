@@ -47,10 +47,15 @@ Route::get('/adminviewdetails2', function () {
     return view('admin_viewdetails2');
 });
 
-Route::get('/luckylakshmi_viewdetails', function () {
-    return view('luckylakshmi_viewdetails');
+Route::get('/chit_viewdetails', function () {
+    return view('chit_viewdetails');
 });
 
 Route::get('/chitform', function () {
     return view('chitform');
 });
+
+
+Route::get('session/get','App\Http\Controllers\SessionController@accessSessionData');
+Route::get('session/set','App\Http\Controllers\SessionController@storeSessionData');
+Route::get('session/remove','App\Http\Controllers\SessionController@deleteSessionData');

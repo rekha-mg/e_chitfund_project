@@ -1,4 +1,7 @@
-
+<?php
+session_start();
+ // You can set the value however you like.
+?>
 
 
 <!DOCTYPE html>
@@ -29,6 +32,7 @@
                 var name = $('#name').val();
                 var password=$('#password').val();
 
+
                 if(name) {
                     $.ajax({
                         url:'/api/login/'+name+'/'+password,
@@ -36,7 +40,7 @@
                         success: function (response, textStatus, xhr) {
                             console.log(response);
                             if(response.data.length ===1 ) {
-                               
+                              
                                alert("Login successfull :" + response.data[0].member_name);
                                if(response.data[0].member_name=="admin"){
                                 document.location.href="http://127.0.0.1:8000/adminviewdetails";
@@ -64,7 +68,38 @@
 
             });
         });
+  function storeSession(){
+     var name = $('#name').val();
+         $.ajax({
+                        url:'/api/session/'+name,
+                        type: 'POST',
+                        success: function (response, textStatus, xhr) {
+                            console.log(response);
+                            if(response.data.length ===1 ) {
+                               
+                               alert("Login successfull :" + response.data[0].member_name);
+                               if(response.data[0].member_name=="admin"){
+                                document.location.href="http://127.0.0.1:8000/adminviewdetails";
+                               }
+                               else{
+                                document.location.href="http://127.0.0.1:8000/userviewdetails";
+                            }
+                            
+                        } else {
+                            alert("plz login again... something is wrong");
+                        }
+                    },
+                    error: function (response, textStatus, errorThrown) {
+                        if (response && response.responseJSON && response.responseJSON.message) {
+                            alert(response.responseJSON.message);
+                        } else {
+                            alert("something wrong happened");
+                        }
+                    }
+                });
 
+
+  }
 
 
     </script>

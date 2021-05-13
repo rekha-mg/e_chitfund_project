@@ -20,21 +20,24 @@
     </head>
 <script type="text/javascript">
 	function display(){
-		var paid,due;
+		/*var paid,due;
 		paid= $('#dd').val();
 		due=$('#dd2').val();
 
 
-	/*	if( paid > due ){
+		if( paid > due ){
 			alert("is late paid");
 		}else{
 			alert("no ");
 		}
-*/
-var d = new Date();
-d.setMonth(8,1);
-d.getMonth(); //outputs 8
-		alert(paid.getMonth());
+
+		var d = new Date();
+		d.setMonth(8,1);
+		//d.getMonth(); //outputs 8
+		//alert(paid.getMonth());*/
+
+
+		
 
 	}
 	
@@ -45,3 +48,5 @@ d.getMonth(); //outputs 8
 <label>Due Date</label><input type="date" id="dd2">
 <br>
 <input type="submit" onclick="display();">
+<h1> {{session('my_name') }} </h1>
+}
