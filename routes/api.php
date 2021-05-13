@@ -52,7 +52,7 @@ Route::patch('/payment/{id}', 'App\Http\Controllers\payment@edit');
 Route::delete('/payment/{id}', 'App\Http\Controllers\payment@destroy');
 
 Route::post('/subscriber', 'App\Http\Controllers\SubscriberController@insert');
-Route::get('/subscriber', 'App\Http\Controllers\SubscriberController@showAll');
+Route::get('/subscriber/{limit}', 'App\Http\Controllers\SubscriberController@showAll');
 
 
 //Route::get('session/get','App\Http\Controllers\SessionController@accessSessionData');
