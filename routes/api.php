@@ -21,8 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/members', 'App\Http\Controllers\MemberController@showAll');
 Route::post('/login/{member_name}/{password}', 'App\Http\Controllers\MemberController@showTwo');
+Route::get('/members', 'App\Http\Controllers\MemberController@showAll');
 Route::get('/members/{member_id}', 'App\Http\Controllers\MemberController@showOne');
 Route::post('/members', 'App\Http\Controllers\MemberController@insert');
 Route::patch('/members/{member_id}', 'App\Http\Controllers\MemberController@edit');
@@ -53,7 +53,9 @@ Route::delete('/payment/{id}', 'App\Http\Controllers\payment@destroy');
 
 Route::post('/subscriber', 'App\Http\Controllers\SubscriberController@insert');
 Route::get('/subscriber/{limit}', 'App\Http\Controllers\SubscriberController@showAll');
+Route::get('/showMembers/{chit_id}', 'App\Http\Controllers\SubscriberController@showMembers');
 
+Route::patch('/subscribers/{id}', 'App\Http\Controllers\SubscriberController@edit');
 
 //Route::get('session/get','App\Http\Controllers\SessionController@accessSessionData');
 //Route::post('session/set','App\Http\Controllers\SessionController@storeSessionData');

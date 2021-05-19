@@ -51,9 +51,10 @@
 <script>
     var payment={};
     var chit_id;
-    var member_id; display_chitsnames();//load to dropdown chit names
-        display_members();//load to dropdown member names
-    var chit_name;
+    var member_id; 
+    display_chitsnames();//load to dropdown chit names
+   
+    
     var amount;
     var paid_date;
     var due_date;
@@ -61,19 +62,16 @@
 
     $( document ).ready(function() {
      
-       
-
-        // get the chitname from dropdown
+             // get the chitid from dropdown
         $('#chitNames').on('change',function() {
-            chit_name=$(this).val();
-           
+            chit_id=$(this).val();
+             display_members();//load to dropdown member names
         });
 
 
         // get the member name from dropdown
         $('#memberName').on('change',function() {
             member_id=$(this).val();
-            console.log("member_id"+member_id);
         });
 
         // sending data to db 
@@ -88,7 +86,7 @@
         $("#tab").empty();
         var table_content='';
         $.ajax({
-            url:'/api/members/',
+            url:'api/showMembers/'+chit_id,
             type: 'GET',
             success: function (response) {
             option_content="";
@@ -103,8 +101,6 @@
 
      // Load dropdown with chit names
     function display_chitsnames(){
-      
-       
         $.ajax({
             url:'/api/chits/',
             type: 'GET',
@@ -112,7 +108,7 @@
           
             option_content="";
             for( i=0;i<response.data.length;i++) {
-                option_content+='<option value='+response.data[i].chit_name+'>'+response.data[i].chit_name+'</option>';
+                option_content+='<option value='+response.data[i].chit_id+'>'+response.data[i].chit_name+'</option>';
             }
                 $("#chitNames").append(option_content);
         }
@@ -128,6 +124,7 @@
         amount=$('#amount').val();
         paid_date=$('#paid_date').val();
         due_date=$('#due_date').val();
+
         if(paid_date > due_date){
             is_late_paid=1;
         }
@@ -140,8 +137,7 @@
         var chit_month=5;
 
         payment.member_id=member_id;
-        payment.chit_id=1;
-        payment.chit_name=chit_name;
+        payment.chit_id=chit_id;
         payment.amount=amount;
         payment.paid_date=paid_date;
         payment.due_date=due_date;
@@ -156,6 +152,7 @@
                         type: 'POST',
                         data: payment,
                         success: function (response, textStatus, xhr) {
+                            alert(textStatus);
                            
                            if(textStatus){
                                 alert(" successfully inserted..");
@@ -221,7 +218,7 @@
   
   <div class="form-group">
     <label for="memberName">Member Names</label><br>
-        <select  id="memberName" name="chitname" >
+        <select  id="memberName" name="member_name" >
         <option value="">Select the Member Name</option>
         </select>
     </div>

@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <style type="text/css">
         body{
             background-color: #007bff;
@@ -29,94 +29,95 @@
 
     </style>
     <script>
-        var person={};
-        function validateform(){
-            
-            var firstName=$('#firstName').val();
-            var lastName=$('#lastName').val();
-            var password1=$('#password1').val();
-            var password2=$('#password2').val();
-            var dob=$('#dob').val();
-            var occupation=$('#occupation').val();
-            var phone=$('#phone').val();
-            var address=$('#address').val();
-            var email=$('#email').val();
-            var adhar=$('#adhar').val();
-            var pancard=$('#pancard').val();
+    var person={};
 
-          
-            person.member_name=firstName;
-            person.password=password1;
-            person.dob=dob;
-            person.phone_num=phone;
-            person.occupation=occupation;
-            person.address=address;
-            person.email_id=email;
-            person.adhar_number=adhar;
-            person.pan_number=pancard;
+function validateform(){
 
-            console.log(person);
-            /*if(password1 != password2){
-                alert("password mismatch ... plz enter again");
-                $('#password1').val()="";
-                $('#password2').val()="";
-                $('#password1').focus();
-                return false;
-            }
-            if(person.phone.toString().length < 10){
-                alert("Enter  your 10 digit mobile number");
-                return false;
-            } 
-            if(person.adhar.toString().length <12 ){
-                alert("Enter your 12 adhar number");
-                return false;
-            }
-             return( true ); */
-         
+    var firstName=$('#firstName').val();
+    var lastName=$('#lastName').val();
+    var password1=$('#password1').val();
+    var password2=$('#password2').val();
+    var dob=$('#dob').val();
+    var occupation=$('#occupation').val();
+    var phone=$('#phone').val();
+    var address=$('#address').val();
+    var email=$('#email').val();
+    var adhar=$('#adhar').val();
+    var pancard=$('#pancard').val();
 
+
+    person.member_name=firstName;
+    person.password=password1;
+    person.dob=dob;
+    person.phone_num=phone;
+    person.occupation=occupation;
+    person.address=address;
+    person.email_id=email;
+    person.adhar_number=adhar;
+    person.pan_number=pancard;
+
+    console.log(person);
+/*if(password1 != password2){
+alert("password mismatch ... plz enter again");
+$('#password1').val()="";
+$('#password2').val()="";
+$('#password1').focus();
+return false;
+}
+if(person.phone.toString().length < 10){
+alert("Enter  your 10 digit mobile number");
+return false;
+} 
+if(person.adhar.toString().length <12 ){
+alert("Enter your 12 adhar number");
+return false;
+}
+return( true ); */
+
+
+}
+
+
+$(document).ready(function() {
+
+    $("#signup").click(function () {
+        validateform();
+/*f(validateform()){
+alert("done with validateform");
+}
+else
+{
+alert("something is wrong in validate");
+}*/
+
+$.ajax({
+    url:'/api/members',
+    type: 'POST',
+    data: person,
+    success: function (response, textStatus, xhr) {
+        console.log(response);
+        if(response.data.length ===1 ) {
+            alert("Login successfull :" + response.data[0].member_id);
+            document.location.href="http://127.0.0.1:8000/viewdetails";
+        } else {
+            alert("plz login again... something is wrong");
         }
+    },
+    error: function (response, textStatus, errorThrown) {
+        if (response && response.responseJSON && response.responseJSON.message) {
+            alert(response.responseJSON.message);
+        } else {
+            alert("something wrong happened");
+        }
+    }
+});
 
-
-        $(document).ready(function() {
-
-            $("#signup").click(function () {
-                validateform();
-                /*f(validateform()){
-                    alert("done with validateform");
-                }
-                else
-                {
-                    alert("something is wrong in validate");
-                }*/
-      
-                       $.ajax({
-                        url:'/api/members',
-                        type: 'POST',
-                        data: person,
-                        success: function (response, textStatus, xhr) {
-                            console.log(response);
-                            if(response.data.length ===1 ) {
-                                alert("Login successfull :" + response.data[0].member_id);
-                                document.location.href="http://127.0.0.1:8000/viewdetails";
-                            } else {
-                                alert("plz login again... something is wrong");
-                            }
-                        },
-                        error: function (response, textStatus, errorThrown) {
-                            if (response && response.responseJSON && response.responseJSON.message) {
-                                alert(response.responseJSON.message);
-                            } else {
-                                alert("something wrong happened");
-                            }
-                        }
-                   });
-                             
-            });
-        });
+});
+});
 
 
 
-    </script>
+</script>
 </head>
 <body>
 
@@ -136,12 +137,9 @@
 
                 </ul>
             </nav>
-
         </div>
-        <div>
-
-
-        </div>
+    <div>
+</div>
 
 
         <form name="myform" >

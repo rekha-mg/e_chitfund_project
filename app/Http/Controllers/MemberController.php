@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use DB;
 use App\Http\Requests;
+
+use DB;
 
 class MemberController extends Controller
 {
@@ -46,15 +47,20 @@ class MemberController extends Controller
             }
             return $this->sendResponse("true", $user_list, 'request completed', 200);
     }
-
+//login 
 public function showTwo(Request $request,$member_name,$password)
-{    
+{
+        
     if($member_name){
 
                 try {
                     Log::info('Showing user details of : ' . $member_name);
 
                     $member= DB::select('select member_id, member_name from members where member_name = ? and password=?', [$member_name, $password]);
+
+                        //$request->session()->put('user_name_session',$member_name);
+                         // getting error as not set session
+                        
                     } catch (\PDOException $pex) {
                     Log::critical('some error: ' . print_r($pex->getMessage(), true) ); //xampp off
                     return $this->sendResponse("false", "", 'error related to database', 500);
@@ -67,7 +73,12 @@ public function showTwo(Request $request,$member_name,$password)
         } else {
                 return $this->sendResponse("false", "", 'some error in user name', 500);
             }
+           
             return $this->sendResponse("true", $member, 'request completed', 200);
+        }
+
+        public function storeSessionData(Request $request) {
+           
         }
 
 public function showOne(Request $request,$member_id)

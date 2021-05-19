@@ -1,6 +1,6 @@
 <?php
 session_start();
- // You can set the value however you like.
+// You can set the value however you like.
 ?>
 
 
@@ -27,79 +27,65 @@ session_start();
 
     </style>
     <script>
-        $(document).ready(function() {
-            $("#login").click(function () {
-                var name = $('#name').val();
-                var password=$('#password').val();
 
+    $(document).ready(function() {
+        $("#login").click(function () {
+            var name = $('#name').val();
+            var password=$('#password').val();
 
-                if(name) {
-                    $.ajax({
-                        url:'/api/login/'+name+'/'+password,
-                        type: 'POST',
-                        success: function (response, textStatus, xhr) {
-                            console.log(response);
-                            if(response.data.length ===1 ) {
-                              
-                               alert("Login successfull :" + response.data[0].member_name);
-                               if(response.data[0].member_name=="admin"){
+            if(name) {
+                $.ajax({
+                    url:'/api/login/'+name+'/'+password,
+                    type: 'POST',
+                    success: function (response, textStatus, xhr) {
+                        if(response.data.length ===1 ) {
+                            alert("Login successfull :" + response.data[0].member_name);
+                            // calling function
+                            storeSession(name);
+                            if(response.data[0].member_name=="admin"){
                                 document.location.href="http://127.0.0.1:8000/adminviewdetails";
-                               }
-                               else{
+                            } else{
                                 document.location.href="http://127.0.0.1:8000/userviewdetails";
                             }
-                            
+
                         } else {
-                            alert("plz login again... something is wrong");
+                                alert("plz login again... something is wrong");
+                            }
+                        },
+                        error: function (response, textStatus, errorThrown) {
+                            if (response && response.responseJSON && response.responseJSON.message) {
+                                alert(response.responseJSON.message);
+                            } else {
+                                alert("something wrong happened");
+                            }
                         }
-                    },
-                    error: function (response, textStatus, errorThrown) {
-                        if (response && response.responseJSON && response.responseJSON.message) {
-                            alert(response.responseJSON.message);
-                        } else {
-                            alert("something wrong happened");
-                        }
-                    }
-                });
+                    });
                 } else {
-                    alert("Please fill the form before submit login.");
-                }
-
-
-            });
-        });
-  function storeSession(){
-     var name = $('#name').val();
-         $.ajax({
-                        url:'/api/session/'+name,
-                        type: 'POST',
-                        success: function (response, textStatus, xhr) {
-                            console.log(response);
-                            if(response.data.length ===1 ) {
-                               
-                               alert("Login successfull :" + response.data[0].member_name);
-                               if(response.data[0].member_name=="admin"){
-                                document.location.href="http://127.0.0.1:8000/adminviewdetails";
-                               }
-                               else{
-                                document.location.href="http://127.0.0.1:8000/userviewdetails";
-                            }
-                            
-                        } else {
-                            alert("plz login again... something is wrong");
+                        alert("Please fill the form before submit login.");
                         }
-                    },
-                    error: function (response, textStatus, errorThrown) {
-                        if (response && response.responseJSON && response.responseJSON.message) {
-                            alert(response.responseJSON.message);
-                        } else {
-                            alert("something wrong happened");
-                        }
-                    }
+                    });
                 });
 
+        function storeSession(name){
+            alert("session set");
+            $.ajax({
+                url:'/session/set',
+                type: 'get',
+                data: name,
+                success: function (response, textStatus, xhr) {
+                    console.log(response);
+                },
+                error: function (response, textStatus, errorThrown) {
+                    if (response && response.responseJSON && response.responseJSON.message) {
+                        alert(response.responseJSON.message);
+                    } else {
+                        alert("something wrong happened");
+                    }
+                }
+            });
 
-  }
+
+        }
 
 
     </script>

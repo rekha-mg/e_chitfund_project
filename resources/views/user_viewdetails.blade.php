@@ -34,7 +34,9 @@
        var chit_id;
        var currentdate = new Date(); 
        var member_subscirbed={};
-        
+         $(document).ready(function() {
+            viewSession();
+         });
 
         // post data to subcriber table - meber who have subscribed
         // I have to take member_id when he login using session [pending]
@@ -102,7 +104,28 @@
         });
     }
 
-        
+    function viewSession(){
+    alert("session called");
+    
+         $.ajax({
+                        url:'/session/get',
+                        type:'get',
+                        
+                        success: function (response, textStatus, xhr) {
+                            console.log(response);
+                        },
+                           
+                        error: function (response, textStatus, errorThrown) {
+                        if (response && response.responseJSON && response.responseJSON.message) {
+                            alert(response.responseJSON.message);
+                        } else {
+                            alert("something wrong happened");
+                        }
+                    }
+                });
+
+
+  }
 
 
     </script>

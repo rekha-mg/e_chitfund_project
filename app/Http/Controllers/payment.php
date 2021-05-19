@@ -88,21 +88,54 @@ class payment extends Controller
     }
 
     public function insert(Request $request){
-    	if( $request->has('member_id') && $request->has('chit_id') && $request->has('chit_name')  && $request->has('amount')  && $request->has('paid_date') && $request->has('due_date') && $request->has('is_late_paid') && $request->has('chit_month') && $request->has('installment_number') ) {
 
+    	if( $request->has('member_id') && $request->has('chit_id')  && $request->has('amount')  && $request->has('paid_date') && $request->has('due_date') && $request->has('is_late_paid') && $request->has('chit_month') && $request->has('installment_number') ) {
+
+      
     		$member_id=$request->input('member_id');
     		$chit_id=$request->input('chit_id');
-    		$chit_name=$request->input('chit_name');
+    		
     		$amount=$request->input('amount');
     		$paid_date=$request->input('paid_date');
     		$due_date =$request->input('due_date');
     		$is_late_paid=$request->input('is_late_paid');
     		$chit_month =$request->input('chit_month');
     		$installment_number =$request->input('installment_number');
+        echo $chit_id;
+
+        try{
+          $result = DB::select('select chit_name from chits where chit_id = ?', [$chit_id]);
+          $chit_name= $result[0]->chit_name;
+          echo $result[0]->chit_name;
+          }
+        catch(\PDOException $pex){
+          Log::critical('some error: '.print_r($pex->getMessage(),true)); //xampp off
+          return $this->sendResponse("false", "",'chit -error related to database', 500);
+          }  
+        catch(\Exception $e){
+          Log::critical('some error:'.print_r($e->getMessage(),true));
+          Log::critical('error line: '.print_r($e->getLine(), true));
+          return $this->sendResponse("false","",'chit -some error in server',500);
+        } 
+
+        try{
+          $res = DB::select('select member_name from members where member_id = ?', [$member_id]);
+          $member_name= $res[0]->member_name;
+          }
+        catch(\PDOException $pex){
+          Log::critical('some error: '.print_r($pex->getMessage(),true)); //xampp off
+          return $this->sendResponse("false", "",'members -error related to database', 500);
+        }  
+        catch(\Exception $e){
+          Log::critical('some error:'.print_r($e->getMessage(),true));
+          Log::critical('error line: '.print_r($e->getLine(), true));
+          return $this->sendResponse("false","",'members -some error in server',500);
+        }
+
     		try{
     					
-    			$resp = DB::insert('insert into payments (member_id,chit_id,chit_name,amount,
-    				paid_date,due_date,is_late_paid,chit_month,installment_number) values(?,?,?,?,?,?,?,?,?)',[$member_id,$chit_id,$chit_name,$amount,$paid_date,$due_date,$is_late_paid,$chit_month,$installment_number]);
+          $resp = DB::insert('insert into payments (member_id,member_name,chit_id,chit_name,amount,
+    				paid_date,due_date,is_late_paid,chit_month,installment_number) values(?,?,?,?,?,?,?,?,?,?)',[$member_id,$member_name,$chit_id,$chit_name,$amount,$paid_date,$due_date,$is_late_paid,$chit_month,$installment_number]);
     			Log::info('Paid  chit : '.$resp);
     		}	
 
@@ -140,7 +173,7 @@ class payment extends Controller
     		$due_date =$request->input('due_date');
 
     		try{
-    			$resp = DB::update('update payment set chit_name  = ?, chit_number = ? ,member_id=?, amount_paid=?, paid_date=?, due_date=?  where id = ?',[$chit_name,$chit_number,$member_id, $amount_paid,$paid_date,$due_date,$id]);
+    			$resp = DB::update('update payments set chit_name  = ?, chit_number = ? ,member_id=?, amount_paid=?, paid_date=?, due_date=?  where id = ?',[$chit_name,$chit_number,$member_id, $amount_paid,$paid_date,$due_date,$id]);
     			Log::info('updated lucky lakshmi chit :'. $id);
     		}	
 

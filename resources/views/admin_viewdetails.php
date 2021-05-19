@@ -42,37 +42,102 @@
 
     </style>
     <script>
-        function display_members(){
+        var is_approved;
+        var id;
+
+    
+// ------------called on Member  button  click---------------------------------------------------------------
+    function display_members(){
             $("#tab").empty();
             var table_content='';
-        $.ajax({
+            
+            $.ajax({
             url:'/api/members/',
             type: 'GET',
-
             success: function (response) {
-                 console.log(response);
+                console.log(response);
                 console.log(response.data.length);
                 table_content='<table class="table table-hover"><thead><tr><th>Name</th>';
-                 table_content+='<th>Phone</th><th>Email</th></tr></thead><tbody>';
+                table_content+='<th>Phone</th><th>Email</th></tr></thead><tbody>';
 
                 for( i=0;i<response.data.length;i++) {
                     table_content+='<tr>';
                     table_content+='<td>'+response.data[i].member_name+'</td>';
                     table_content+='<td>'+response.data[i].phone+'</td>';
                     table_content+='<td>'+response.data[i].email_id+'</td> </tr>';
-
                 }
                 $("#tab").append(table_content);
             }
 
         });
-        }
-
-        function update_table(){
+    }
+// ------------called--------------------------------------------------------------     
+    function update_table(){
+         alert("called function");
             
+         
+           
+
+
+            /*$.ajax({
+                url:'/api/subscribers/'+id,
+                type: 'PATCH',
+                data: is_approved,
+                success: function (response, textStatus, xhr) {
+                    console.log(response);
+                   }
+                   /* if(response.data.length ===1 ) {
+                        alert("Login successfull :" + response.data[0].member_id);
+                        document.location.href="http://127.0.0.1:8000/viewdetails";
+                    } else {
+                        alert("plz login again... something is wrong");
                     }
-        
-        function subscribe(){
+                },
+                error: function (response, textStatus, errorThrown) {
+                    if (response && response.responseJSON && response.responseJSON.message) {
+                        alert(response.responseJSON.message);
+                    } else {
+                        alert("something wrong happened");
+                    }
+                }
+            });*/
+          
+
+        }
+//----------------called on subscribe buttton click-----------------------------------------------------
+    function get_value(is_approved,id){
+            alert("called get_value "+is_approved+id);
+
+            $.ajax({
+                url:'/api/subscribers/'+id,
+                type: 'PATCH',
+                data: is_approved,
+                success: function (response, textStatus, xhr) {
+                    console.log(response);
+                   }
+               });
+                   /* if(response.data.length ===1 ) {
+                        alert("Login successfull :" + response.data[0].member_id);
+                        document.location.href="http://127.0.0.1:8000/viewdetails";
+                    } else {
+                        alert("plz login again... something is wrong");
+                    }
+                },
+                error: function (response, textStatus, errorThrown) {
+                    if (response && response.responseJSON && response.responseJSON.message) {
+                        alert(response.responseJSON.message);
+                    } else {
+                        alert("something wrong happened");
+                    }
+                }
+            });*/
+                 
+
+    }
+       
+
+
+    function subscribe(){
             $("#tab").empty();
             var table_content='';
             var limit=5;
@@ -86,27 +151,28 @@
                 table_content+='<th>Chit Id</th><th>Member Id</th> <th>Subscribed Date</th><th>Is Approved </th></tr></thead><tbody>';
 
                 for( i=0;i<response.data.length;i++) {
+
+                    id=response.data[i].id;
                     table_content+='<tr>';
                     table_content+='<td>'+response.data[i].id+'</td>';
                     table_content+='<td>'+response.data[i].chit_id+'</td>';
                     table_content+='<td>'+response.data[i].member_id+'</td> ';
                     table_content+='<td>'+response.data[i].subscribed_date+'</td> ';
-                    table_content+='<td><input class="form-control form-control-sm" type="text" value='+response.data[i].is_approved+ '></td>';
-                    table_content+='<td><button type="button" class="btn btn-light" id="approve" onclick="update_table();">Save</button></td> </tr>';
-
+                    table_content+='<td><button type="button" class="btn btn-light" id="approved" onclick="get_value('+1+","+id+');" value='+response.data[i].id+'>Approved</button></td></td>';
+                    table_content+='<td><button type="button" class="btn btn-light" id="denay" onclick="get_value('+0+","+id+');" value='+response.data[i].id+ '>Denay</button></td> </tr>';
+                        
                 }
                     $("#tab").append(table_content);
             }
 
-        });
-           
-
-        }
-
-        function display_chits(){
+      });
+         
+    }
+//-------------called on chit button click -----------------------------------------------------------------
+    function display_chits(){
             $("#tab").empty();
             var table_content='';
-
+          
             $.ajax({
             url:'/api/chits/',
             type: 'GET',
@@ -128,6 +194,7 @@
 
         });
     }
+
 
 
     </script>
