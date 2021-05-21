@@ -234,6 +234,7 @@
     <div class="form-group">
       <label for="due_date" >Due Date</label>
       <input type="date" class="form-control" id="due_date">
+   
     </div>
  
     <button type="submit" class="btn btn-primary" id="post_data" >Submit</button>

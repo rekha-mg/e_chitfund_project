@@ -34,18 +34,30 @@
        var chit_id;
        var currentdate = new Date(); 
        var member_subscirbed={};
-         $(document).ready(function() {
-            viewSession();
-         });
+         ;
 
         // post data to subcriber table - meber who have subscribed
         // I have to take member_id when he login using session [pending]
         function subscribe(chit_id){
+            //alert(chit_id);
             
             member_subscirbed.chit_id=chit_id;
             member_subscirbed.member_id=1; // manually adding [coz pending session data]
-            member_subscirbed.subscribed_date=currentdate.getFullYear()+"/"+currentdate.getMonth()+"/"+currentdate.getDate();
-            $.ajax({
+            member_subscirbed.subscribed_date=currentdate.getFullYear()+"-"+currentdate.getMonth()+"-"+currentdate.getDate();
+            console.log(member_subscirbed);
+            /*$.ajax({
+                url: '/api/subscriber',
+                type: "POST",
+                date:member_subscirbed;
+                success: function(data, textStatus, jqXHR) {
+                    alert('Success!');
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    alert('Error occurred!'+errorThrown);
+                }
+
+            });*/
+            /*$.ajax({
                 url:'/api/subscriber',
                 type:'Post',
                 data:member_subscirbed,
@@ -61,10 +73,10 @@
                     if (response && response.responseJSON && response.responseJSON.message) {
                         alert(response.responseJSON.message);
                     } else {
-                        alert("something wrong happened");
+                        alert("something wrong happened  while subscribing");
                     }
                 }
-            });
+            });*/
 
 
 
@@ -104,8 +116,8 @@
         });
     }
 
-    function viewSession(){
-    alert("session called");
+    /*function viewSession(){
+   // alert("session called");
     
          $.ajax({
                         url:'/session/get',
@@ -119,14 +131,14 @@
                         if (response && response.responseJSON && response.responseJSON.message) {
                             alert(response.responseJSON.message);
                         } else {
-                            alert("something wrong happened");
+                            alert("something wrong happened in session");
                         }
                     }
                 });
 
 
   }
-
+*/
 
     </script>
 </head>

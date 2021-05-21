@@ -104,33 +104,22 @@
           
 
         }
-//----------------called on subscribe buttton click-----------------------------------------------------
+//----------------called on approved and denay buttton click ---------------------------------------------
     function get_value(is_approved,id){
-            alert("called get_value "+is_approved+id);
+                   var x=is_approved;
 
             $.ajax({
-                url:'/api/subscribers/'+id,
-                type: 'PATCH',
+                url:'/api/approval/'+id,
+                type:'PATCH',
                 data: is_approved,
-                success: function (response, textStatus, xhr) {
+              
+                //data:{isapproved:is_approved,_method:”PATCH”},
+                success: function(response, textStatus, xhr) {
+                      console.log(data);
                     console.log(response);
                    }
                });
-                   /* if(response.data.length ===1 ) {
-                        alert("Login successfull :" + response.data[0].member_id);
-                        document.location.href="http://127.0.0.1:8000/viewdetails";
-                    } else {
-                        alert("plz login again... something is wrong");
-                    }
-                },
-                error: function (response, textStatus, errorThrown) {
-                    if (response && response.responseJSON && response.responseJSON.message) {
-                        alert(response.responseJSON.message);
-                    } else {
-                        alert("something wrong happened");
-                    }
-                }
-            });*/
+            
                  
 
     }
@@ -230,8 +219,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:8000/contact">Contact Us</a>
                 </li>
-    </div>
-  </li>
+   
+
 
             </ul>
         </nav>

@@ -20,33 +20,35 @@
     </head>
 <script type="text/javascript">
 	function display(){
-		/*var paid,due;
-		paid= $('#dd').val();
-		due=$('#dd2').val();
-
-
-		if( paid > due ){
-			alert("is late paid");
-		}else{
-			alert("no ");
-		}
-
-		var d = new Date();
-		d.setMonth(8,1);
-		//d.getMonth(); //outputs 8
-		//alert(paid.getMonth());*/
-
-
-		
-
+	 $(document).ready(function() {
+     var d = new Date();
+     var YYYY = d.getFullYear();
+     var YY = YYYY.toString().substring(2);
+     var MM = ("0" + (d.getMonth() + 1)).slice(-2);
+     var DD = ("0" + d.getDate()).slice(-2);
+     alert(MM);
+});
 	}
+
+	$(document).ready(function(){
+
+$('#dd').change(function(){
+  
+  var dt = new Date( $(this).val());
+  var year = dt.getFullYear();
+  var month =  (dt.getMonth() < 10 ? '0' : '') + (dt.getMonth()+1);
+  var day = (dt.getDate() < 10 ? '0' : '') + dt.getDate();
+
+
+  alert(month);
+})
+});
 	
 </script>
 	
 <label>Paid Date</label><input type="date" id="dd">
 <br>
-<label>Due Date</label><input type="date" id="dd2">
 <br>
 <input type="submit" onclick="display();">
 <h1> {{session('my_name') }} </h1>
-}
+

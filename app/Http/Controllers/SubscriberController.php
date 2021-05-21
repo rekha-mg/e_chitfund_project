@@ -107,6 +107,7 @@ public function showMembers($chit_id)
         try{
           $res = DB::select('select member_name from members where member_id = ?', [$member_id]);
           $member_name= $res[0]->member_name;
+          echo $res[0]->member_name;
           }
         catch(\PDOException $pex){
           Log::critical('some error: '.print_r($pex->getMessage(),true)); //xampp off
@@ -118,7 +119,7 @@ public function showMembers($chit_id)
           return $this->sendResponse("false","",'members -some error in server',500);
         }
 
-            try {
+         try {
                 $resp = DB::insert('insert into subscribers (chit_id,chit_name,member_id,member_name,subscribed_date) values (?,?,?,?,?)', [$chit_id,$chit_name,$member_id,$member_name,$subscribed_date]);
 
 
@@ -136,18 +137,19 @@ public function showMembers($chit_id)
             Log::warning('input data missing' . print_r($request->input('chit_id'), true));
             return $this->sendResponse("input data missing", 'incorrect request', 500); //wrong field name
         }
-      return $this->sendResponse("true", $resp, 'data insereted successfully', 201);
-    }
+      return $this->sendResponse("true", $resp, 'data insereted successfully', 201); 
+    
+  }
 
 
 
-    public function edit(Request $request,$id)
+    public function approval($id,Request $request)
     {
         if ($request->has('is_approved') )
         {
              $is_approved =$request->input('is_approved');
-             echo $is_approved;
-             echo "id".$id;
+             echo "is_approved ".$is_approved;
+             echo "id ".$id;
             
             try{
                 $resp = DB::update('update subscribers set is_approved = ? where id = ?',[$is_approved,$id]);

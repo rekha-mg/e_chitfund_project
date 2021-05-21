@@ -55,7 +55,7 @@ Route::post('/subscriber', 'App\Http\Controllers\SubscriberController@insert');
 Route::get('/subscriber/{limit}', 'App\Http\Controllers\SubscriberController@showAll');
 Route::get('/showMembers/{chit_id}', 'App\Http\Controllers\SubscriberController@showMembers');
 
-Route::patch('/subscribers/{id}', 'App\Http\Controllers\SubscriberController@edit');
+Route::patch('/approval/{id}', 'App\Http\Controllers\SubscriberController@approval');
 
 //Route::get('session/get','App\Http\Controllers\SessionController@accessSessionData');
 //Route::post('session/set','App\Http\Controllers\SessionController@storeSessionData');
