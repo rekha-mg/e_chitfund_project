@@ -87,9 +87,14 @@ public function showMembers($chit_id)
             $chit_id = $request->input('chit_id');
             $member_id=$request->input('member_id');
             $subscribed_date = $request->input('subscribed_date');
+            echo $chit_id;
+            echo " -".$member_id;
+            echo "- ".$subscribed_date;
 
 
-              try{
+
+
+     /* try{
           $result = DB::select('select chit_name from chits where chit_id = ?', [$chit_id]);
           $chit_name= $result[0]->chit_name;
           echo $result[0]->chit_name;
@@ -117,25 +122,27 @@ public function showMembers($chit_id)
           Log::critical('some error:'.print_r($e->getMessage(),true));
           Log::critical('error line: '.print_r($e->getLine(), true));
           return $this->sendResponse("false","",'members -some error in server',500);
-        }
+        }*/
+        $chit_name="chit1";
+        $member_name="mahesh";
 
          try {
-                $resp = DB::insert('insert into subscribers (chit_id,chit_name,member_id,member_name,subscribed_date) values (?,?,?,?,?)', [$chit_id,$chit_name,$member_id,$member_name,$subscribed_date]);
+                $resp = DB::insert('insert into subscribers(chit_id,chit_name,member_id,member_name,subscribed_date) values (?,?,?,?,?)', [$chit_id,$chit_name,$member_id,$member_name,$subscribed_date]);
 
 
-                Log::info('Inserted new user: ' . $resp);
+                Log::info('Inserted new subscriber: ' . $resp);
             } catch (\PDOException $pex) {
                 Log::critical('some error: ' . print_r($pex->getMessage(), true)); //xampp off
-                return $this->sendResponse("false", "", 'error related to database', 500);
+                return $this->sendResponse("false", "", 'subscribers- error related to database', 500);
             } catch (\Exception $e) {
                 Log::critical('some error: ' . print_r($e->getMessage(), true));
                 Log::critical('error line: ' . print_r($e->getLine(), true));
-                return $this->sendResponse("false", "", 'some error in server', 500);
+                return $this->sendResponse("false", "", 'subscribers- some error in server', 500);
             }
         }
         else {
             Log::warning('input data missing' . print_r($request->input('chit_id'), true));
-            return $this->sendResponse("input data missing", 'incorrect request', 500); //wrong field name
+            return $this->sendResponse("input data missing in subscribers", 'incorrect request', 500); //wrong field name
         }
       return $this->sendResponse("true", $resp, 'data insereted successfully', 201); 
     
@@ -173,4 +180,5 @@ public function showMembers($chit_id)
         Log::info('Updated subscribers deatils: ' . $id);
         return $this->sendResponse("true", $resp, 'data updated', 200);
     }
+
 }

@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
 </head>
     <style type="text/css">
         body{
@@ -71,51 +70,16 @@
 
         });
     }
-// ------------called--------------------------------------------------------------     
-    function update_table(){
-         alert("called function");
-            
-         
-           
 
-
-            /*$.ajax({
-                url:'/api/subscribers/'+id,
-                type: 'PATCH',
-                data: is_approved,
-                success: function (response, textStatus, xhr) {
-                    console.log(response);
-                   }
-                   /* if(response.data.length ===1 ) {
-                        alert("Login successfull :" + response.data[0].member_id);
-                        document.location.href="http://127.0.0.1:8000/viewdetails";
-                    } else {
-                        alert("plz login again... something is wrong");
-                    }
-                },
-                error: function (response, textStatus, errorThrown) {
-                    if (response && response.responseJSON && response.responseJSON.message) {
-                        alert(response.responseJSON.message);
-                    } else {
-                        alert("something wrong happened");
-                    }
-                }
-            });*/
-          
-
-        }
 //----------------called on approved and denay buttton click ---------------------------------------------
     function get_value(is_approved,id){
-                   var x=is_approved;
-
+                   
             $.ajax({
                 url:'/api/approval/'+id,
                 type:'PATCH',
                 data: is_approved,
-              
-                //data:{isapproved:is_approved,_method:”PATCH”},
                 success: function(response, textStatus, xhr) {
-                      console.log(data);
+                      
                     console.log(response);
                    }
                });
@@ -134,7 +98,7 @@
             $.ajax({
             url:'/api/subscriber/'+limit,
             type: 'GET',
-            success: function (response) {
+            success: function (response, textStatus, xhr) {
                  
                 table_content='<table class="table table-hover"><thead><tr><th>Id</th>';
                 table_content+='<th>Chit Id</th><th>Member Id</th> <th>Subscribed Date</th><th>Is Approved </th></tr></thead><tbody>';

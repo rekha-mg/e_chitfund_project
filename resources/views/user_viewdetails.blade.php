@@ -11,7 +11,7 @@
     <style type="text/css">
         body{
             background-color: #007bff;
-            background-image: url("http://localhost/laravel/images/money.jpg");
+            /*background-image: url("http://localhost/laravel/images/money.jpg");*/
         }
         li{
             padding: 4px;
@@ -45,38 +45,17 @@
             member_subscirbed.member_id=1; // manually adding [coz pending session data]
             member_subscirbed.subscribed_date=currentdate.getFullYear()+"-"+currentdate.getMonth()+"-"+currentdate.getDate();
             console.log(member_subscirbed);
-            /*$.ajax({
-                url: '/api/subscriber',
-                type: "POST",
-                date:member_subscirbed;
-                success: function(data, textStatus, jqXHR) {
-                    alert('Success!');
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    alert('Error occurred!'+errorThrown);
-                }
-
-            });*/
-            /*$.ajax({
-                url:'/api/subscriber',
-                type:'Post',
-                data:member_subscirbed,
+            $.ajax({
+                url:'/approval/'+chit_id,
+                type: 'patch',
+                data: member_subscirbed,
                 success: function (response, textStatus, xhr) {
-                            //alert("Data: " + response.data + "\nStatus: " + textStatus);
-                    if(textStatus){
-                        alert("subscribed successfully..");
-                    }
-                    else
-                        alert("not eligible");
-                    },
-               error: function (response, textStatus, errorThrown) {
-                    if (response && response.responseJSON && response.responseJSON.message) {
-                        alert(response.responseJSON.message);
-                    } else {
-                        alert("something wrong happened  while subscribing");
-                    }
+                    console.log(response);
+                    
                 }
-            });*/
+            });
+          
+            
 
 
 
